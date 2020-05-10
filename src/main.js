@@ -5,9 +5,11 @@ import LoginFormComponent from "./components/login-form";
 import ButtonComponent from "./components/button";
 import CustomTextFieldComponent from "./components/custom-text-field";
 import CustomTitleH1Component from "./components/custom-title-h1";
+import LogotypeComponent from "./components/logotype";
 
 const main = document.querySelector(`.main`);
 
+const logotype = new LogotypeComponent(`#`);
 const loginForm = new LoginFormComponent();
 const title = new CustomTitleH1Component(`Войти`);
 const loginField = new CustomTextFieldComponent({
@@ -35,6 +37,7 @@ loginBtn.addClass(`login-form__btn`);
 loginBtn.setClickHandler(()=>{
   disableForm(loginForm.getElement());
 });
+render(loginForm.getElement(), logotype.getElement(), RenderPosition.BEFOREEND);
 render(loginForm.getElement(), title.getElement(), RenderPosition.BEFOREEND);
 render(loginForm.getElement(), loginField.getElement(), RenderPosition.BEFOREEND);
 render(loginForm.getElement(), passField.getElement(), RenderPosition.BEFOREEND);
