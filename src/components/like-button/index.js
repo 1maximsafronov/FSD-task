@@ -4,7 +4,7 @@ import AbstractComponent from "../abstract-component";
 const createTemplate = (label, name, id, value) => {
   return (
     `<p class="like-button">
-      <input class="visually-hidden" type="checkbox" name="${name}" id="${id}" value="${value}">
+      <input class="visually-hidden" type="check box" name="${name}" id="${id}" value="${value}">
       <label for="${id}">${label}</label>
     </p>`
   );
