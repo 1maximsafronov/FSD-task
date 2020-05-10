@@ -21,6 +21,13 @@ export default class AbstractComponent {
 
     return this._element;
   }
+  addClass(addedClass) {
+    this.getElement().classList.add(addedClass);
+  }
+
+  removeClass(removedClass) {
+    this.getElement().classList.add(removedClass);
+  }
 
   removeElement() {
     this._element = null;
