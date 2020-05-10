@@ -3,4 +3,4 @@ import {RenderPosition, render} from "./utils/render.js";
 // import SiteNavComponent from "./components/site-nav";
 // import UserNavComponent from "./components/user-nav";
 const main = document.querySelector(`.main`);
-// render(main, loginForm.getElement(), RenderPosition.BEFOREEND);
+// render(main, registerForm.getElement(), RenderPosition.BEFOREEND);

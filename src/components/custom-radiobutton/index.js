@@ -23,4 +23,8 @@ export default class extends AbstractComponent {
     return createTemplate(this._label, this._name, this._id, this._value);
   }
 
+  setChecked() {
+    this.getElement().querySelector(`input`).checked = true;
+  }
+
 }

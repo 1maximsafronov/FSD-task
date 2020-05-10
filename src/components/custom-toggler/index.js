@@ -11,7 +11,7 @@ const createTemplate = (label, name, id, value) => {
 };
 
 export default class extends AbstractComponent {
-  constructor(label, name, id, value) {
+  constructor(label, name, id, value = ``) {
     super();
     this._label = label;
     this._name = name;
