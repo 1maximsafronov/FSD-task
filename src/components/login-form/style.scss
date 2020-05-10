@@ -19,6 +19,11 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
+.login-form__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .login-form__text-field {
   display: flex;
   flex-direction: column;

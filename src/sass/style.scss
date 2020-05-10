@@ -5,11 +5,19 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  color: $color-dark-shade-75;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 24px;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  font-family: 'Montserrat', sans-serif;
 }
 
 img {
