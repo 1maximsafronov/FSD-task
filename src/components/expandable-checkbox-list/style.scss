@@ -1,0 +1,57 @@
+@import "../../sass/variables.scss";
+
+.expandable-checkbox-list {
+  &--closed {
+    .expandable-checkbox-list__toggler::after {
+      transform: rotate(-135deg);
+    }
+
+    .expandable-checkbox-list__list {
+      display: none;
+    }
+  }
+}
+
+.expandable-checkbox-list__toggler {
+  position: relative;
+  margin-bottom: 18px;
+  padding-right: 44px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $color-dark-shade-100;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 15px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    transform: rotate(45deg);
+    border-width: 0;
+    border-style: solid;
+    border-color: $color-dark-shade-50;
+    border-top-width: 2px;
+    border-left-width: 2px;
+  }
+}
+
+.expandable-checkbox-list__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expandable-checkbox-list__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
