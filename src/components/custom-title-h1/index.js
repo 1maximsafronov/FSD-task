@@ -1,20 +1,20 @@
 import './style.scss';
 import AbstractComponent from "../abstract-component";
 
-const createTemplate = (text) => {
+const createTemplate = (title) => {
   return (
-    `<h1>${text}</h1>`
+    `<h1 class="custom-title-h1">${title}</h1>`
   );
 };
 
 export default class extends AbstractComponent {
-  constructor(text) {
+  constructor(title) {
     super();
-    this._text = text;
+    this._title = title;
   }
 
   getTemplate() {
-    return createTemplate(this._text);
+    return createTemplate(this._title);
   }
 
 }
