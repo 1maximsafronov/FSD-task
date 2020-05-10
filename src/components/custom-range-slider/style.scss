@@ -1,0 +1,72 @@
+@import "../../sass/variables.scss";
+
+.custom-range-slider {
+  padding: 0;
+}
+
+.custom-range-slider__header {
+  display: flex;
+  margin-bottom: 23px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-range-slider__title {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  text-transform: uppercase;
+  color: $color-dark-shade-100;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 15px;
+}
+
+.custom-range-slider__value {
+  text-align: right;
+  text-transform: uppercase;
+  color: $color-dark-shade-50;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 15px;
+}
+
+.custom-range-slider__scale {
+  position: relative;
+  box-sizing: border-box;
+  height: 6px;
+  border: 1px solid $color-dark-shade-25;
+  border-radius: 3px;
+}
+
+.custom-range-slider__bar {
+  height: 100%;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+
+.custom-range-slider__toggler {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+  &--min {
+    left: 30px;
+  }
+
+  &--max {
+    right: 30px;
+  }
+}
