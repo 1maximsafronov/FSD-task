@@ -25,4 +25,48 @@
     cursor: auto;
     opacity: 1;
   }
+
+  &--border {
+    color: $color-purpule;
+    border: 2px solid $color-purpule;
+    background: none;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      border-color: rgba($color-purpule, 0.5);
+    }
+  }
+
+  &--text {
+    display: inline-block;
+    padding: 0;
+    color: $color-purpule;
+    border: none;
+    background: none;
+
+    &:hover,
+    &:focus {
+      color: $color-dark-shade-50;
+    }
+  }
+
+  &--arrow {
+    position: relative;
+    padding-right: 44px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 44px;
+      height: 44px;
+      content: "";
+      transform: translateY(-50%);
+      background-image: url('./img/icon-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
 }

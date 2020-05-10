@@ -25,7 +25,7 @@ const passField = new CustomTextFieldComponent({
   type: `password`,
   placeholder: `Пароль`
 });
-const loginBtn = new ButtonComponent(`button`, `Войти`);
+const loginBtn = new ButtonComponent(`button`, `Войти`, `arrow`);
 
 title.addClass(`login-form__title`);
 loginField.addClass(`login-form__text-field`);
