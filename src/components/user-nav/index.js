@@ -9,10 +9,24 @@ const createUserLinkTemplate = () => {
 const createTemplate = (isLogined) => {
 
   return (
-    `<div class="user-nav ${isLogined ? `user-nav--logined` : ``}">
+    `<div class="user-nav ${isLogined ? `user-nav--logined` : `123`}">
 
     </div>`
   );
+};
+
+const renderUserNav = (container, status)=>{
+  if (status) {
+    const username = createSomeElement(createUserLinkTemplate());
+    render(container, username, RenderPosition.BEFOREEND);
+  } else {
+    const loginBtn = new ButtonComponent(`link`, `login`, `border`, `login.html`);
+    const regBtn = new ButtonComponent(`link`, `REGISTER`, ``, `registration.html`);
+    loginBtn.addClass(`user-nav__btn`);
+    regBtn.addClass(`user-nav__btn`);
+    render(container, loginBtn.getElement(), RenderPosition.BEFOREEND);
+    render(container, regBtn.getElement(), RenderPosition.BEFOREEND);
+  }
 };
 
 const checkStatus = (status) =>{
@@ -29,29 +43,19 @@ export default class extends AbstractComponent {
   }
 
   getTemplate() {
-    return createTemplate(false);
+    return createTemplate(checkStatus(this._status));
   }
 
   getElement() {
-    if (checkStatus(this._status)) {
-      this._element = createSomeElement(createTemplate(true));
-      let userLink = createSomeElement(createUserLinkTemplate());
-      render(this._element, userLink, RenderPosition.BEFOREEND);
-    } else {
-      this._element = createSomeElement(this.getTemplate());
-      const login = new ButtonComponent(`link`, `Login`, `border`, `login.html`);
-      login.addClass(`user-nav__btn`);
-      register.addClass(`user-nav__btn`);
-      const register = new ButtonComponent(`link`,
-          `Register`, ``, `register.html`);
-
-      login.addClass(`user-nav__btn`);
-      register.addClass(`user-nav__btn`);
-
-      render(this._element, login.getElement(), RenderPosition.BEFOREEND);
-      render(this._element, register.getElement(), RenderPosition.BEFOREEND);
+    if (!this._element) {
+      this._renderContent();
     }
 
     return this._element;
+  }
+
+  _renderContent() {
+    this._element = createSomeElement(this.getTemplate());
+    renderUserNav(this._element, checkStatus(this._status));
   }
 }
