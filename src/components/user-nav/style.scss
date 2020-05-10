@@ -1,0 +1,43 @@
+@import "../../sass/variables.scss";
+
+.user-nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--logined {
+    padding-left: 30px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 1px;
+      height: 30px;
+      content: "";
+      transform: translateY(-50%);
+      background-color: $color-dark-shade-10;
+    }
+  }
+}
+
+.user-nav__btn {
+  line-height: 34;
+}
+
+.user-nav__username {
+  display: block;
+  text-decoration: none;
+  color: $color-dark-shade-50;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 17px;
+
+  &:hover,
+  &:focus {
+    color: $color-dark-shade-75;
+    font-weight: bold;
+  }
+}
