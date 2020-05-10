@@ -4,15 +4,15 @@ import {RenderPosition, render} from "./utils/render.js";
 import LoginFormComponent from "./components/login-form";
 import ButtonComponent from "./components/button";
 import CustomTextFieldComponent from "./components/custom-text-field";
-import CustomCheckboxComponent from "./components/custom-checkbox";
+import CustomRadiobuttonComponent from "./components/custom-toggler";
 
 
 const main = document.querySelector(`.main`);
 const loginForm = new LoginFormComponent();
 const loginBtn = new ButtonComponent(`button`, `Войти`);
 const loginField = new CustomTextFieldComponent(`Логин`, `login`, `login`);
-const passField = new CustomTextFieldComponent(`Пароль`, `password`, `password`, `password`);
-const rememberPass = new CustomCheckboxComponent(`Запомнить пароль?`, `remember-pass`, `remember-pass`);
+const passField = new CustomTextFieldComponent(`Пароль`, `password`, `password`, `password`, ``);
+const rememberPass = new CustomRadiobuttonComponent(`Запомнить пароль?`, `remember-pass`, `remember-pass`);
 
 loginField.getElement().classList.add(`login-form__text-field`);
 passField.getElement().classList.add(`login-form__text-field`);
