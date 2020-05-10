@@ -43,5 +43,23 @@
 .login-form__btn {
   display: block;
   width: 100%;
+  margin-bottom: 30px;
+  line-height: 44px;
+}
+
+.login-form__isRegistered {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form__question {
+  color: $color-black;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 18px;
+}
+
+.login-form__createBtn {
   line-height: 44px;
 }

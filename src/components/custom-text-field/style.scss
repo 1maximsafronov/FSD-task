@@ -31,6 +31,12 @@
     font-style: normal;
     line-height: 24px;
 
+    &::placeholder {
+      color: $color-dark-shade-25;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
     &:hover,
     &:focus {
       border-color: rgba(31, 32, 65, 0.5);
