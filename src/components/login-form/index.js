@@ -32,8 +32,8 @@ const renderLoginFormContent = (container) =>{
     type: `password`,
     placeholder: `Пароль`
   });
-  const loginBtn = new ButtonComponent(`button`, `Войти`, `arrow`);
-  const createBtn = new ButtonComponent(`button`, `Создать`, `border`);
+  const loginBtn = new ButtonComponent(`submite`, `Войти`, `arrow`);
+  const createBtn = new ButtonComponent(`link`, `Создать`, `border`, `registration.html`);
   loginFormTitl.addClass(`login-form__title`);
   loginField.addClass(`login-form__text-field`);
   passField.addClass(`login-form__text-field`);
