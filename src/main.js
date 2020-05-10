@@ -5,7 +5,7 @@ import LoginFormComponent from "./components/login-form";
 import ButtonComponent from "./components/button";
 import CustomTextFieldComponent from "./components/custom-text-field";
 import CheckboxListComponent from "./components/expandable-checkbox-list";
-import CustomTitleH1Component from "./components/custom-title-h1";
+import CustomTitleH1Component from "./components/custom-title-h3";
 const main = document.querySelector(`.main`);
 const loginForm = new LoginFormComponent();
 const loginBtn = new ButtonComponent(`button`, `Войти`);
