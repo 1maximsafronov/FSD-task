@@ -1,0 +1,10 @@
+include ../custom-checkbox/custom-checkbox
+
+mixin expandable-checkbox-list(options)
+  .expandable-checkbox-list(class= attributes.class)
+    .expandable-checkbox-list__toggler(type='button')= options.title
+    ul.expandable-checkbox-list__list
+
+      each item in options.items
+        li.expandable-checkbox-list__item
+          +custom-checkbox(item)

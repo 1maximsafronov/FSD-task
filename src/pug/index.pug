@@ -1,3 +1,9 @@
+include ./components/custom-bullet-list/custom-bullet-list
+include ./components/main-nav/main-nav
+include ./components/copyright/copyright
+include ./components/login-form/login-form
+include ./components/subscribe-widget/subscribe-widget
+
 doctype html
 html(lang="ru")
   head
@@ -6,8 +12,10 @@ html(lang="ru")
     link(src="style.css" rel="stylesheet")
 
   body
-    header
-      include ./components/main-nav/main-nav
+    header.main-header
+      +main-nav(class="main-header__nav")
+
     main
+      +subscribe-widget
     footer
     script(src="main.js")

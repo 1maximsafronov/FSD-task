@@ -12,6 +12,7 @@
     "start": "webpack-dev-server --open"
   },
   "devDependencies": {
+    "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
     "eslint": "6.1.0",
     "eslint-config-htmlacademy": "0.5.2",

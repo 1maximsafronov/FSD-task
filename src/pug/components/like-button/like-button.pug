@@ -1,0 +1,4 @@
+mixin like-button(options)
+  p.like-button(class= attributes.class)
+    input.visually-hidden(type="checkbox", name= options.name, id= options.id, value= options.value)
+    label(for= options.id)= options.label

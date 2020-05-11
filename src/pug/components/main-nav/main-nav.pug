@@ -1,4 +1,11 @@
-nav.main-nav
-  div.main-nav__wrapper.container
-    include ../logo/logo
-    include ../site-nav/site-nav
+include ../logotype/logotype
+include ../site-nav/site-nav
+include ../user-nav/user-nav
+
+mixin main-nav
+  nav.main-nav(class= attributes.class)
+    div.main-nav__wrapper.container
+
+      +logotype(class="main-nav__logo")
+      +site-nav(class="main-nav__site-nav")
+      +user-nav(class="main-nav__user-nav")

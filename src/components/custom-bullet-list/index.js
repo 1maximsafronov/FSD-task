@@ -4,7 +4,7 @@ const createTemplate = (elements) => {
   let listElements = ``;
 
   elements.forEach((item) => {
-    listElements += `<li class="custom-bullet-lis__item">${item}</li>`;
+    listElements += `<li class="custom-bullet-list__item">${item}</li>`;
   });
 
   return (

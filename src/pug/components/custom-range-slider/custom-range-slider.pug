@@ -1,0 +1,9 @@
+mixin custom-range-slider(options)
+  .custom-range-slider(class= attributes.class)
+    .custom-range-slider__header
+      h3.custom-range-slider__title= options.title
+      p.custom-range-slider__value= options.value
+    .custom-range-slider__scale
+      .custom-range-slider__bar
+      button.custom-range-slider__toggler.custom-range-slider__toggler--min(type='button')
+      button.custom-range-slider__toggler.custom-range-slider__toggler--max(type='button')

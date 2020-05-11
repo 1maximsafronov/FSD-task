@@ -1,0 +1,33 @@
+include ../button/button
+include ../button/button-link
+include ../custom-text-field/custom-text-field
+
+mixin login-form
+  form.login-form(class= attributes.class)
+    h1.login-form__title.custom-title-h1 Войти
+    +custom-text-field({
+      label: `Логин`,
+      isLabelShown: 0,
+      name: `login`,
+      id: `login`,
+      type: `text`,
+      placeholder: `Email`,
+      class: `login-form__text-field`})(class="login-form__text-field")
+    +custom-text-field({
+      label: `Пароль`,
+      isLabelShown: 0,
+      name: `pass`,
+      id: `pass`,
+      type: `password`,
+      placeholder: `Пароль`})(class="login-form__text-field")
+    +button({
+      label: `Войти`,
+      type: `submite`,
+      mod: `arrow`,})(class="login-form__btn")
+    .login-form__isRegistered
+      p.login-form__question
+        | Нет аккаунта на Toxin?
+      +button-link({
+        label: `Создать`,
+        mod: `border`,
+        url: `registration.html`})(class="login-form__createBtn")

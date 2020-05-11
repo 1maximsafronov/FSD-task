@@ -1,0 +1,63 @@
+include ../button/button
+include ../button/button-link
+include ../custom-toggler/custom-toggler
+include ../custom-text-field/custom-text-field
+include ../custom-radiobutton/custom-radiobutton
+
+mixin registration-form
+  form.registration-form(class= attributes.class)
+    h1.custom-title-h1.registration-form__title Регистрация аккаунта
+    +custom-text-field({
+      label: `Имя пользователя`,
+      isLabelShown: 0,
+      name: `user-name`,
+      id: `user-name`,
+      placeholder: `Имя`
+      })(class="registration-form__text-field")
+    +custom-text-field({
+      label: `Фамилия Пользователя`,
+      isLabelShown: 0,
+      name: `user-surname`,
+      id: `user-surname`,
+      placeholder: `Фамилия`
+      })(class="registration-form__text-field")
+    .registration-form__gender
+      +custom-radiobutton({
+        label: `Мужчина`,
+        name: `gender`,
+        id: `male-gender`,
+        value: `male-gender`
+        })(class="registration-form__gender-item")
+      +custom-radiobutton({
+        label: `Женщина`,
+        name: `gender`,
+        id: `female-gender`,
+        value: `female-gender`
+        })(class="registration-form__gender-item")
+    +custom-text-field({
+      label: `Дата рождения`,
+      isLabelShown: 1,
+      name: `user-birthday`,
+      id: `user-birthday`,
+      placeholder: `ДД.ММ.ГГГГ`
+      })(class="registration-form__text-field")
+    +custom-text-field({
+      label: `данные для входа в сервис`,
+      isLabelShown: 1,
+      name: `user-email`,
+      id: `user-email`,
+      placeholder: `Emain`
+      })(class="registration-form__text-field")
+    +custom-text-field({
+      label: `Введите пароль`,
+      isLabelShown: 0,
+      name: `user-password`,
+      id: `user-password`,
+      type: `password`,
+      placeholder: `Пароль`
+      })(class="registration-form__text-field")
+    +button({type: `submite`, label: `перейти к оплате`, mod: `arrow`})(class="registration-form__btn")
+    .registration-form__isRegistered
+      p.registration-form__question
+        | Нет аккаунта на Toxin?
+      +button-link({type: `submite`, label: `войти`, mod: `border`, url:`login.html`})(class="registration-form__loginBtn")

@@ -1,0 +1,4 @@
+mixin custom-radiobutton(options)
+  p.custom-radiobutton(class= attributes.class)
+    input.visually-hidden(type='radio', name= options.name, id= options.id, value= options.value)
+    label(for= options.id)= options.label
