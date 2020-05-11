@@ -1,0 +1,25 @@
+@import "../../sass/variables.scss";
+
+.copyright {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.copyright__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__text {
+  margin: 0;
+  color: $color-dark-shade-75;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 17px;
+}
+
+.copyright__social {
+  margin: 0;
+}
