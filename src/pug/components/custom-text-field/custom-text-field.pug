@@ -1,0 +1,6 @@
+mixin custom-text-field(options)
+  p.custom-text-field
+    label(for= options.id class= options.isLabelShown ? `` : `visually-hidden`)= options.label
+    input(type= options.type name= options.name id= options.id placeholder= options.placeholder)
+    if options.button
+      button.custom-text-field__arrow-btn(type="submite")
