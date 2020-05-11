@@ -1,0 +1,27 @@
+.main-footer {
+  background-color: $color-white;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.main-footer__wrapper {
+  display: flex;
+  padding-top: 100px;
+}
+
+.main-footer--creative {
+  .main-footer__wrapper {
+    flex-direction: column;
+    padding-bottom: 110px;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.main-footer__desc {
+  max-width: 540px;
+  margin-bottom: 25px;
+}
+
+.main-footer__social {
+  margin: 0;
+}

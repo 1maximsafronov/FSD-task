@@ -1,0 +1,9 @@
+include ../small-desc-widget/small-desc-widget
+include ../social/social
+
+mixin main-footer-creative
+
+  footer.main-footer.main-footer--creative
+    .main-footer__wrapper.container
+      +small-desc-widget(class="main-footer__desc")
+      +social(class="main-footer__social")
