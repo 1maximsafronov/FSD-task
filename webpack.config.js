@@ -44,7 +44,7 @@ module.exports = {
       chunkFilename: 'style.css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/index.pug',
+      template: './src/pug/index.pug',
       filename: "index.html"
     }),
   ],
