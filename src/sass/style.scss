@@ -1,30 +1,26 @@
 @import "variables.scss";
-@import "visually-hidden.scss";
+@import "global.scss";
+@import "./blocks/button.scss";
 @import "./blocks/container.scss";
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  color: $color-dark-shade-75;
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 24px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-img {
-  max-width: 100%;
-}
-
-header {
-  display: flex;
-}
+@import "./blocks/copyright.scss";
+@import "./blocks/custom-bullet-list.scss";
+@import "./blocks/custom-checkbox.scss";
+@import "./blocks/custom-radibutton.scss";
+@import "./blocks/custom-range-slider.scss";
+@import "./blocks/custom-text-field.scss";
+@import "./blocks/custom-title-h1.scss";
+@import "./blocks/custom-title-h2.scss";
+@import "./blocks/custom-title-h3.scss";
+@import "./blocks/custom-toggler.scss";
+@import "./blocks/expandable-checkbox-list.scss";
+@import "./blocks/like-button.scss";
+@import "./blocks/login-form.scss";
+@import "./blocks/logotype.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/rate-button.scss";
+@import "./blocks/registration-form.scss";
+@import "./blocks/site-nav.scss";
+@import "./blocks/social.scss";
+@import "./blocks/subscribe-widget.scss";
+@import "./blocks/user-nav.scss";
+@import "./blocks/visually-hidden.scss";

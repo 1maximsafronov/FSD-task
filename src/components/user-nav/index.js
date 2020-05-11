@@ -1,4 +1,3 @@
-import './style.scss';
 import AbstractComponent from "../abstract-component";
 import {createSomeElement, render, RenderPosition} from "../../utils/render.js";
 import ButtonComponent from "../button";

@@ -1,4 +1,3 @@
-import './style.scss';
 import AbstractComponent from "../abstract-component";
 import img from './img/logo.svg';
 const createTemplate = (link) => {

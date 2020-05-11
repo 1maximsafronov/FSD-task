@@ -1,4 +1,3 @@
-import './style.scss';
 import AbstractComponent from "../abstract-component";
 
 const createTemplate = (label, isLabelShown, name, id, type, placeholder, modifier) => {

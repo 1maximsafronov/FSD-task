@@ -1,4 +1,3 @@
-import './style.scss';
 // import {disableForm} from "./utils/form-actions.js";
 import {createSomeElement, render, RenderPosition} from "../../utils/render.js";
 import CustomTextFieldComponent from "../custom-text-field";

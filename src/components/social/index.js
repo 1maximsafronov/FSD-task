@@ -1,4 +1,3 @@
-import './style.scss';
 import AbstractComponent from "../abstract-component";
 
 const createTemplate = () => {

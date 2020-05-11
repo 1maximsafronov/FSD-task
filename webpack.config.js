@@ -1,27 +1,32 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, './public'),
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, './public'),
     watchContentBase: true,
   },
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        loader: "pug-loader",
+        options: {
+          pretty: true
+        }
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,
           'css-loader',
-          // Compiles Sass to CSS
           'sass-loader',
         ],
       },
@@ -35,10 +40,12 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: 'style.css',
-      chunkFilename: '123.css',
+      chunkFilename: 'style.css',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/index.pug',
+      filename: "index.html"
     }),
   ],
 };

@@ -1,12 +1,10 @@
-@import "../../sass/variables.scss";
-
-.custom-radiobutton {
+.custom-toggler {
   label {
     position: relative;
     display: block;
-    padding-left: 30px;
+    padding-left: 50px;
     cursor: pointer;
-    color: $color-dark-shade-50;
+    color: $color-dark-shade-75;
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
@@ -14,45 +12,37 @@
 
     &::before {
       position: absolute;
-      top: 0;
       left: 0;
       display: block;
-      width: 20px;
+      box-sizing: border-box;
+      width: 40px;
       height: 20px;
       content: "";
       border: 1px solid $color-dark-shade-25;
-      border-radius: 50%;
+      border-radius: 10px;
+      y: 0;
     }
 
     &::after {
       position: absolute;
       top: 4px;
       left: 4px;
-      display: block;
-      display: none;
       width: 12px;
       height: 12px;
       content: "";
       border-radius: 50%;
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    }
-
-    &:hover {
-      &::before {
-        border-color: $color-purpule;
-      }
+      background: $color-dark-shade-25;
     }
   }
 
-  input[type="radio"]:checked + label {
-    color: $color-dark-shade-75;
-
+  input[type="checkbox"]:checked + label {
     &::before {
       border-color: $color-purpule;
     }
 
     &::after {
-      display: block;
+      left: 24px;
+      background-color: $color-purpule;
     }
   }
 }

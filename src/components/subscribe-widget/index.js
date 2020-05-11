@@ -1,4 +1,3 @@
-import './style.scss';
 import {createSomeElement, render, RenderPosition} from "../../utils/render.js";
 import AbstractComponent from "../abstract-component";
 import CustomTextFieldComponent from "../custom-text-field";

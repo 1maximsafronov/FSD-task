@@ -1,4 +1,4 @@
-import './style.scss';
+import './site-nav.pug';
 import AbstractComponent from "../abstract-component";
 const createTemplate = () => {
 
