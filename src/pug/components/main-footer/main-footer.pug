@@ -1,0 +1,16 @@
+include ../small-desc-widget/small-desc-widget
+include ../additional-nav/additional-nav
+include ../copyright/copyright
+include ../subscribe-widget/subscribe-widget
+
+mixin main-footer
+
+  footer.main-footer
+
+    .main-footer__wrapper.container
+      +small-desc-widget(class="main-footer__desc")
+      +additional-nav(`Navigation`, [`About Us`,`News`,`Support`,`Products`,])(class="main-footer__nav")
+      +additional-nav(`ABOUT US`, [`Who we are`,`Our team`,`Careers`,`Investors`,])(class="main-footer__nav")
+      +additional-nav(`Support`, [`Documentation`,`Community`,`Get in Touch`])(class="main-footer__nav")
+      +subscribe-widget(class="main-footer__subscribe")
+    +copyright(class="main-footer__copyright")

@@ -1,0 +1,26 @@
+.additional-nav__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.additional-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional-nav__item {
+  margin-bottom: 20px;
+  color: $color-dark-shade-50;
+  font-size: 14px;
+  line-height: 17px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.additional-nav__link {
+  text-decoration: none;
+  color: $color-dark-shade-50;
+}

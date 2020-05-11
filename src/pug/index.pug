@@ -2,8 +2,9 @@ include ./components/custom-bullet-list/custom-bullet-list
 include ./components/main-nav/main-nav
 include ./components/copyright/copyright
 include ./components/login-form/login-form
-include ./components/small-desc-widget/small-desc-widget
+include ./components/main-footer/main-footer
 include ./components/main-footer/main-footer-creative
+
 doctype html
 html(lang="ru")
   head
@@ -16,6 +17,6 @@ html(lang="ru")
       +main-nav(class="main-header__nav")
 
     main
-      +small-desc-widget
+    +main-footer
     +main-footer-creative
     script(src="main.js")

@@ -1,0 +1,7 @@
+mixin additional-nav(title, items)
+  div.additional-nav(class= attributes.class)
+    h3.custom-title-h3.additional-nav__title= title
+    ul.additional-nav__list
+      each item in items
+        li.additional-nav__item
+          a.additional-nav__link(href="#")= item
