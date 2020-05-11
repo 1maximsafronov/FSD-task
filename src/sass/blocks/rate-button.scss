@@ -4,7 +4,7 @@
   list-style: none;
 
   input[type="checkbox"]:checked + label {
-    background-image: url('../img/icon-star.svg');
+    background-image: url('/img/icon-star.svg');
   }
 }
 
@@ -13,7 +13,7 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
-  background-image: url('../img/icon-star-border.svg');
+  background-image: url('/img/icon-star-border.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

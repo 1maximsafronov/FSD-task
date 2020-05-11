@@ -1,2 +1,19 @@
-block main-header
-  h1 Hello World!
+include ./components/custom-bullet-list/custom-bullet-list
+include ./components/main-nav/main-nav
+include ./components/copyright/copyright
+include ./components/login-form/login-form
+include ./components/main-footer/main-footer
+include ./components/main-footer/main-footer-creative
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Поиск номеров в отеле
+
+  body
+    header.main-header
+      +main-nav(class="main-header__nav")
+
+    main
+    +main-footer

@@ -1,18 +1,21 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
   mode: 'production',
-  entry: './src/main.js',
+  entry: {
+    'css/style.css':'./src/sass/style.scss'
+  },
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, './public'),
+    filename: 'index.html',
+    path: path.join(__dirname, '/public/'),
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, './public'),
+    contentBase: path.join(__dirname, '/public/'),
     watchContentBase: true,
   },
   module: {
@@ -32,15 +35,17 @@ module.exports = {
          {
            loader: 'css-loader',
            options: { sourceMap: true }
-         }, {
+         },
+         {
            loader: 'sass-loader',
-           options: { sourceMap: true }
+           options: { sourceMap: true}
          }
        ]
       },
       {
         test: /\.(woff|woff2|ttf|svg)$/,
         loader: 'file-loader',
+        exclude: '/src/img/',
         options: {
           name: '[name].[ext]'
         }
@@ -48,6 +53,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
+        exclude: '/src/fonts/',
         options: {
           name: '[name].[ext]'
         }
@@ -55,13 +61,26 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, 'src/fonts/'),
+        to: path.resolve(__dirname, 'public/fonts/'),
+      },
+      {
+        from: path.resolve(__dirname, 'src/img'),
+        to: path.resolve(__dirname, 'public/img'),
+      },
+    ]),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
-      chunkFilename: 'style.css',
+      filename: 'css/style.css'
     }),
     new HtmlWebpackPlugin({
       template: './src/pug/index.pug',
       filename: "index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pug/search-room.pug',
+      filename: "search-room.html"
     }),
   ],
 };
