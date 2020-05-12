@@ -4,7 +4,8 @@ html {
 
 body {
   color: $color-dark-shade-75;
-  font-family: 'Montserrat', 'Arial', sans-serif;
+
+  font-family: $font-primary;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;

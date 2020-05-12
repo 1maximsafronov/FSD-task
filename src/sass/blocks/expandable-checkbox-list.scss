@@ -12,11 +12,15 @@
 
 .expandable-checkbox-list__toggler {
   position: relative;
+
   margin-bottom: 18px;
   padding-right: 44px;
+
   cursor: pointer;
   text-transform: uppercase;
+
   color: $color-dark-shade-100;
+
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -26,11 +30,15 @@
     position: absolute;
     top: 50%;
     right: 20px;
+
     display: block;
+
     width: 10px;
     height: 10px;
+
     content: "";
     transform: rotate(45deg);
+
     border-width: 0;
     border-style: solid;
     border-color: $color-dark-shade-50;
@@ -41,8 +49,10 @@
 
 .expandable-checkbox-list__list {
   display: block;
+
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 

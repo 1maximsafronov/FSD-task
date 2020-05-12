@@ -1,7 +1,10 @@
 .social {
   display: flex;
+
   padding: 0;
+
   list-style: none;
+
   flex-wrap: wrap;
 }
 
@@ -15,21 +18,24 @@
 
 .social__link {
   display: block;
+
   width: 24px;
   height: 24px;
+
   text-decoration: none;
+
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
   &--tw {
-    background-image: url('/img/icon-twitter.svg');
+    background-image: url("/img/icon-twitter.svg");
   }
 
   &--fb {
-    background-image: url('/img/icon-facebook.svg');
+    background-image: url("/img/icon-facebook.svg");
   }
 
   &--inst {
-    background-image: url('/img/icon-instagram.svg');
+    background-image: url("/img/icon-instagram.svg");
   }
 }
