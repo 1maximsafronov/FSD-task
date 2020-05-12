@@ -9,10 +9,13 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title Поиск номеров в отеле
+    title Headers & footers
 
   body
     header.main-header
+      +main-nav({isLogined: 0})(class="main-header__nav")
+      +main-nav({isLogined: 1})(class="main-header__nav")
 
     main
     +main-footer
+    +main-footer-creative

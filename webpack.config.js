@@ -79,6 +79,10 @@ module.exports = {
       filename: "index.html"
     }),
     new HtmlWebpackPlugin({
+      template: './src/pug/ui-kit.pug',
+      filename: "ui-kit.html"
+    }),
+    new HtmlWebpackPlugin({
       template: './src/pug/search-room.pug',
       filename: "search-room.html"
     }),

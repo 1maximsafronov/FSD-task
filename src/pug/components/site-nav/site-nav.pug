@@ -1,14 +1,5 @@
-mixin site-nav
+mixin site-nav(items)
   ul.site-nav(class= attributes.class)
-    li.site-nav__item
-      a.site-nav__link.site-nav__link--active(href='#') Home
-    li.site-nav__item
-      a.site-nav__link(href='#') About Us
-    li.site-nav__item.site-nav__item--sub-nav
-      a.site-nav__link(href='#') Services
-    li.site-nav__item
-      a.site-nav__link(href='#') Careers
-    li.site-nav__item
-      a.site-nav__link(href='#') News
-    li.site-nav__item
-      a.site-nav__link(href='#') Documentation
+    each item in items
+      li.site-nav__item
+        a.site-nav__link(href= item.url, class= item.isActive ? `site-nav__link--active` : ``)= item.label

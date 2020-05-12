@@ -1,10 +1,15 @@
 .custom-radiobutton {
   label {
     position: relative;
+
     display: block;
+
     padding-left: 30px;
+
     cursor: pointer;
+
     color: $color-dark-shade-50;
+
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
@@ -14,10 +19,14 @@
       position: absolute;
       top: 0;
       left: 0;
+
       display: block;
+
       width: 20px;
       height: 20px;
+
       content: "";
+
       border: 1px solid $color-dark-shade-25;
       border-radius: 50%;
     }
@@ -26,13 +35,17 @@
       position: absolute;
       top: 4px;
       left: 4px;
+
       display: block;
       display: none;
+
       width: 12px;
       height: 12px;
+
       content: "";
+
       border-radius: 50%;
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      background: linear-gradient(180deg, $color-purpule 0%, #8ba4f9 100%);
     }
 
     &:hover {

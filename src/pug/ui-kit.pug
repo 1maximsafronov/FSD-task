@@ -1,0 +1,91 @@
+include ./components/main-nav/main-nav
+include ./components/login-form/login-form
+include ./components/main-footer/main-footer
+include ./components/registration-form/registration-form
+include ./components/main-footer/main-footer-creative
+include ./components/custom-text-field/custom-text-field
+include ./components/custom-checkbox/custom-checkbox
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title UI KIT
+
+  body.ui-kit
+
+    .ui-kit__wrapper
+      .ui-kit__column
+        +custom-text-field({
+        label: `Text Field`,
+        isLabelShown: 1,
+        type: `email`,
+        placeholder: `Email`
+        })(class="ui-kit__element")
+
+        +custom-text-field({
+        label: `Text Field`,
+        isLabelShown: 1,
+        type: `text`,
+        placeholder: `Email`,
+        value: `This is pretty awesome`
+        })(class="ui-kit__element")
+
+        +custom-text-field({
+        label: `Dropdown`,
+        isLabelShown: 1,
+        type: `text`,
+        placeholder: `Сколько гостей`,
+        value: ``
+        })(class="ui-kit__element")
+
+        +custom-text-field({
+        label: `masked text field`,
+        isLabelShown: 1,
+        type: `text`,
+        placeholder: `ДД.ММ.ГГГГ`,
+        value: ``
+        })(class="ui-kit__element")
+
+        +custom-text-field({
+        label: `filter date dropdown`,
+        isLabelShown: 1,
+        type: `text`,
+        placeholder: `ДД.ММ.ГГГГ`,
+        value: `19 авг - 23 авг`
+        })(class="ui-kit__element")
+
+        +custom-text-field({
+        label: `subscription text field`,
+        isLabelShown: 1,
+        type: `email`,
+        placeholder: `Email`,
+        value: ``,
+        button: true
+        })(class="ui-kit__element")
+
+      .ui-kit__column
+        h3.custom-title-h3
+        +custom-checkbox({
+        label: `Можно курить`,
+        id: `checkbox-1`,
+        name: `1`,
+        isCheked: 1
+        })
+      .ui-kit__column
+
+    .ui-kit__wrapper
+      .ui-kit__column
+        +registration-form(class="ui-kit__element")
+      .ui-kit__column
+        +login-form(class="ui-kit__element")
+      .ui-kit__column
+
+    .ui-kit__element
+      +main-nav({isLogined: 0})(class="main-header__nav")
+    .ui-kit__element
+      +main-nav({isLogined: 1})(class="main-header__nav")
+    .ui-kit__element
+      +main-footer
+    .ui-kit__element
+      +main-footer-creative

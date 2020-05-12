@@ -2,10 +2,34 @@ include ../logotype/logotype
 include ../site-nav/site-nav
 include ../user-nav/user-nav
 
-mixin main-nav
+mixin main-nav(options)
   nav.main-nav(class= attributes.class)
     div.main-nav__wrapper.container
 
       +logotype(class="main-nav__logo")
-      +site-nav(class="main-nav__site-nav")
-      +user-nav(class="main-nav__user-nav")
+      +site-nav([{
+      label: `Home`,
+      url: `#`,
+      isActive: 1
+      },{
+      label: `About Us`,
+      url: `#`,
+      isActive: 0
+      },{
+      label: `Services`,
+      url: `#`,
+      isActive: 0
+      },{
+      label: `Careers`,
+      url: `#`,
+      isActive: 0
+      },{
+      label: `News`,
+      url: `#`,
+      isActive: 0
+      },{
+      label: `Documentation`,
+      url: `#`,
+      isActive: 0
+      }])(class="main-nav__site-nav")
+      +user-nav(options)(class="main-nav__user-nav")

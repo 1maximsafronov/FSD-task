@@ -1,7 +1,4 @@
 .registration-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   box-sizing: border-box;
   width: 380px;
   margin-bottom: auto;
@@ -10,10 +7,10 @@
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
-  transform: translate(-50%, -50%);
+
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background: #fff;
+  background: $color-white;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -25,6 +22,7 @@
 .registration-form__text-field {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   margin: 0;
   margin-bottom: 10px;
@@ -40,6 +38,7 @@
 
 .registration-form__gender {
   display: flex;
+
   flex-wrap: wrap;
 }
 
@@ -53,18 +52,22 @@
 
 .registration-form__btn {
   display: block;
+
   width: 100%;
   margin-bottom: 30px;
+
   line-height: 44px;
 }
 
 .registration-form__isRegistered {
   display: flex;
+
   justify-content: space-between;
 }
 
 .registration-form__question {
   color: $color-black;
+
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
