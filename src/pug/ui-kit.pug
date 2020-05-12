@@ -5,6 +5,7 @@ include ./components/registration-form/registration-form
 include ./components/main-footer/main-footer-creative
 include ./components/custom-text-field/custom-text-field
 include ./components/custom-checkbox/custom-checkbox
+include ./components/calendar/calendar
 
 doctype html
 html(lang="ru")
@@ -80,7 +81,7 @@ html(lang="ru")
       .ui-kit__column
         +login-form(class="ui-kit__element")
       .ui-kit__column
-
+        +calendar
     .ui-kit__element
       +main-nav({isLogined: 0})(class="main-header__nav")
     .ui-kit__element

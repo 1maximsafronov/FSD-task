@@ -5,5 +5,5 @@ mixin user-nav(otions)
     if otions.isLogined
       a.user-nav__username(href="#") Cosmin Negoita
     else
-      +button-link({label: `Login`, mod: `border`, url: `#`})(class="user-nav__btn")
-      +button-link({label: `REGISTER`, url: `#`})(class="user-nav__btn")
+      +button-link({label: `Login`, mod: `border`, url: `login.html`})(class="user-nav__btn")
+      +button-link({label: `REGISTER`, url: `registration.html`})(class="user-nav__btn")

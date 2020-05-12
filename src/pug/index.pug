@@ -5,6 +5,9 @@ include ./components/login-form/login-form
 include ./components/main-footer/main-footer
 include ./components/main-footer/main-footer-creative
 include ./components/rate-button/rate-button
+include ./components/calendar/calendar
+
+
 doctype html
 html(lang="ru")
   head
@@ -27,5 +30,6 @@ html(lang="ru")
           +rate-button(1)(class="hotel-room__rate-button")
           p.hotel-room__feedback 145 Отзывов
     main
+      +calendar
     +main-footer
     script(src="main.js")
