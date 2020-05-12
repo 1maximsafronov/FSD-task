@@ -13,7 +13,7 @@ mixin hotel-card(options)
           span.hotel-card__price-value= `${options.price} ₽`
           | в сутки
       div.hotel-card__rate
-        +rate-button(1)(class="hotel-card__rate-button")
+        +rate-button(options.number)(class="hotel-card__rate-button")
         p.hotel-card__feedback
           span.hotel-card__feedback--number= options.feedbackNumber
           | Отзывов
