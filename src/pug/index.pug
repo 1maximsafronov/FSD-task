@@ -5,7 +5,6 @@ include ./components/login-form/login-form
 include ./components/main-footer/main-footer
 include ./components/main-footer/main-footer-creative
 include ./components/rate-button/rate-button
-include ./components/calendar/calendar
 
 
 doctype html
@@ -18,18 +17,6 @@ html(lang="ru")
     header.main-header
       +main-nav({isLogined: 0})(class="main-header__nav")
 
-    article.hotel-room
-      figure.hotel-room__gallery
-        p.hotel-room__photo
-          img.hotel-room__img(src="img/hotel-preview-1.jpg" width="270" height="152")
-      div.hotel-room__desc
-        p.hotel-room__number № 888
-          span.hotel-room__luxe люкс
-        p.hotel-room__price 9 990₽ в сутки
-        div.hotel-room__rate
-          +rate-button(1)(class="hotel-room__rate-button")
-          p.hotel-room__feedback 145 Отзывов
     main
-      +calendar
     +main-footer
     script(src="main.js")
