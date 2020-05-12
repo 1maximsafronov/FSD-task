@@ -1,4 +1,8 @@
 mixin custom-checkbox(options)
   p.custom-checkbox(class= attributes.class)
-    input.visually-hidden(type="checkbox", name= options.name, id= options.id, checked= options.isChecked)
+    input.visually-hidden(
+      type="checkbox",
+      name= options.name,
+      id= options.id,
+      checked= options.isChecked)
     label(for= options.id)= options.label

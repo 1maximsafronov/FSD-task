@@ -3,7 +3,7 @@ include ../button/button-link
 mixin user-nav(otions)
   .user-nav(class= attributes.class class= otions.isLogined ? `user-nav--logined` : ``)
     if otions.isLogined
-      a.user-nav__username(href="#") Cosmin Negoita
+      a.user-nav__username(href="#") Максим Сафронов
     else
-      +button-link({label: `Login`, mod: `border`, url: `login.html`})(class="user-nav__btn")
-      +button-link({label: `REGISTER`, url: `registration.html`})(class="user-nav__btn")
+      +button-link({label: `войти`, mod: `border`, url: `login.html`})(class="user-nav__btn")
+      +button-link({label: `зарегистрироваться`, url: `registration.html`})(class="user-nav__btn")
