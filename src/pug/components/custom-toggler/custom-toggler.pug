@@ -1,9 +1,0 @@
-mixin custom-toggler(options)
-  p.custom-toggler(class= attributes.class)
-    input.visually-hidden(
-      type='checkbox',
-      name= options.name,
-      id= options.id,
-      value= options.value,
-      checked= options.isChecked)
-    label(for= options.id)= options.label

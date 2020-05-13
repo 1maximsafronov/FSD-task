@@ -1,5 +1,0 @@
-mixin site-nav(items)
-  ul.site-nav(class= attributes.class)
-    each item in items
-      li.site-nav__item
-        a.site-nav__link(href= item.url, class= item.isActive ? `site-nav__link--active` : ``)= item.label
