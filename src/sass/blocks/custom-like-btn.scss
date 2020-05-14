@@ -1,0 +1,50 @@
+.custom-like-btn {
+  display: inline-block;
+
+  label {
+    position: relative;
+
+    display: flex;
+
+    box-sizing: border-box;
+    min-width: 40px;
+    margin: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: $color-dark-shade-25;
+    border: 1px solid $color-dark-shade-25;
+    border-radius: 10px;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    align-items: center;
+
+    &::before {
+      display: block;
+
+      width: 10px;
+      height: 8px;
+      margin-right: 5px;
+
+      content: "";
+
+      background-image: url("/img/icon-favorite-off.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    color: $color-purpule;
+    border-color: $color-purpule;
+
+    &::before {
+      background-image: url("/img/icon-favorite-on.svg");
+    }
+  }
+}
