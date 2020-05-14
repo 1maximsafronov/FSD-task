@@ -295,7 +295,7 @@
       <div class="ui-kit__column-m">
 
         <!-- Форма поиска -->
-        <form class="search-form" action="#" method="post">
+        <form class="search-form" action="#" method="post" style="margin-bottom: 40px;">
           <h2 class="search-form__title custom-title-h1">Найдём номера под ваши пожелания</h2>
         </form>
 
@@ -355,7 +355,26 @@
         </form>
       </div>
 
-      <div class="ui-kit__column-m"></div>
+      <div class="ui-kit__column-m">
+        <form class="login-form" action="#" method="post">
+          <h2 class="login-form__title custom-title-h1">Войти</h2>
+
+          <p class="login-form__text-field custom-text-field">
+            <label class="visually-hidden" for="user-email">Email пользователя</label>
+            <input type="email" name="user-email" id="user-email" value="" placeholder="Email">
+          </p>
+
+          <p class="login-form__text-field custom-text-field">
+            <label class="visually-hidden" for="user-password">Пароль пользователя</label>
+            <input type="password" name="user-password" id="user-password" value="" placeholder="Пароль">
+          </p>
+
+          <button class="login-form__btn btn btn--arrow" type="submit">войти</button>
+
+          <p class="login-form__is-logined">Нет аккаунта на Toxin?<a class="login-form__reg-btn btn btn--border" href="registration.html">создать</a>
+          </p>
+        </form>
+      </div>
 
       <div class="ui-kit__column"></div>
 

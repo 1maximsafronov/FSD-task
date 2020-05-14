@@ -23,6 +23,12 @@
 
 .ui-kit__cards {
   background-color: #f4f4f6;
+
+  .container {
+    display: flex;
+
+    justify-content: space-between;
+  }
 }
 
 .ui-kit__column-m {
