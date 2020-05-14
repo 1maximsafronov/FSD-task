@@ -1,0 +1,26 @@
+.footer-nav__title {
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+
+.footer-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav__item {
+  margin-bottom: 20px;
+  line-height: 17px;
+  color: $color-dark-shade-50;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-nav__link {
+  text-decoration: none;
+  color: $color-dark-shade-50;
+}
