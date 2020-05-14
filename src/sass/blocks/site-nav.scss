@@ -1,0 +1,44 @@
+.site-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+.site-nav__item {
+  margin-right: 30px;
+  line-height: 17px;
+  color: $color-dark-shade-50;
+
+  &--sub-nav {
+    padding-right: 24px;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 21px;
+      height: 17px;
+      right: 0;
+      top: 0;
+      background-image: url("/img/icon-tick.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+  }
+}
+
+.site-nav__link {
+  color: $color-dark-shade-50;
+  text-decoration: none;
+
+  &--active {
+    font-weight: bold;
+    color: $color-dark-shade-75;
+  }
+}
+
+.site-nav__sub-nav {
+  display: none;
+}
