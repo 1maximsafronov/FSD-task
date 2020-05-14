@@ -91,12 +91,194 @@
     </ul>
   </section>
 
+
   <section class="ui-kit__form-elements container">
-    <p>
-      <label for=""></label>
-      <input type="text">
-    </p>
+    <div class="ui-kit__column">
+
+      <p class="custom-text-field">
+        <label for="">
+          Text Field
+          <span>Default</span>
+        </label>
+        <input type="text" name="" id="" value="" placeholder="Email">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          Text Field
+          <span>Hover / Focus</span>
+        </label>
+        <input type="text" name="" id="" value="This is pretty awesome" placeholder="">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          Dropdown
+          <span>Default</span>
+        </label>
+        <input type="text" name="" id="" value="Сколько гостей" placeholder="">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          masked text field
+          <span>Default</span>
+        </label>
+        <input type="text" name="" id="" value="" placeholder="ДД.ММ.ГГГГ">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          date Dropdown
+        </label>
+        <input type="text" name="" id="" value="ДД.ММ.ГГГГ" placeholder="">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          date Dropdown
+        </label>
+        <input type="text" name="" id="" value="19.08.2019" placeholder="">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          filter date dropdown
+        </label>
+        <input type="text" name="" id="" value="19 авг - 23 авг" placeholder="">
+      </p>
+
+      <p class="custom-text-field">
+        <label for="">
+          subscription text field
+        </label>
+        <input type="email" name="" id="" value="" placeholder="Email">
+      </p>
+
+    </div>
+
+    <div class="ui-kit__column">
+      <!-- Кастомные чекбоксы -->
+      <h3 class="custom-title-h3">Checkbox Buttons</h3>
+
+      <p class="custom-checkbox">
+        <input class="visually-hidden" type="checkbox" name="smoking" id="smoking" value="smoking">
+        <label for="smoking">Можно курить</label>
+      </p>
+
+      <p class="custom-checkbox">
+        <input class="visually-hidden" type="checkbox" name="pets" id="pets" value="pets">
+        <label for="pets">Можно с питомцами</label>
+      </p>
+
+      <p class="custom-checkbox">
+        <input class="visually-hidden" type="checkbox" name="guests" id="guests" value="guests">
+        <label for="guests">Можно пригласить гостей (до 10 человек)</label>
+      </p>
+
+      <!-- Кастомные радиобаттоны -->
+      <h3 class="custom-title-h3">Radio Buttons</h3>
+
+      <p class="custom-radiobutton">
+        <input class="visually-hidden" type="radio" name="gender" id="male" value="male">
+        <label for="male">Мужчина</label>
+      </p>
+
+      <p class="custom-radiobutton">
+        <input class="visually-hidden" type="radio" name="gender" id="female" value="female">
+        <label for="female">Женщина</label>
+      </p>
+
+      <!-- Кастомные переключатели -->
+      <h3 class="custom-title-h3">Toggle</h3>
+
+      <p class="custom-toggler">
+        <input class="visually-hidden" type="checkbox" name="subsribe-torrler-1" id="subsribe-torrler-1" value="">
+        <label class="visually-hidden" for="subsribe-torrler-1">Получать спецпредложения</label>
+      </p>
+
+      <p class="custom-toggler">
+        <input type="checkbox" name="subsribe-torrler-2" id="subsribe-torrler-2" value="">
+        <label for="subsribe-torrler-2">Получать спецпредложения</label>
+      </p>
+
+      <!-- Кастомные лайки -->
+      <h3 class="custom-title-h3">like button</h3>
+
+      <p class="custom-like-button">
+        <input class="visually-hidden" type="radio" name="like-button-1" id="like-button-1" value="">
+        <label for="like-button-1">2</label>
+      </p>
+
+      <p class="custom-like-button">
+        <input class="visually-hidden" type="radio" name="like-button-2" id="like-button-2" value="">
+        <label for="like-button-2">12</label>
+      </p>
+
+      <!-- Кастомные кнопки рейтинга -->
+      <h3 class="custom-title-h3">rate button</h3>
+
+      <ul class="custom-rate-button">
+        <li class="custom-rate-button__item">
+        </li>
+        <li class="custom-rate-button__item">
+        </li>
+        <li class="custom-rate-button__item">
+        </li>
+        <li class="custom-rate-button__item">
+        </li>
+        <li class="custom-rate-button__item">
+        </li>
+      </ul>
+    </div>
+
+    <div class="ui-kit__column">
+      <!-- Кастомные кнопки -->
+      <h3 class="custom-title-h3">buttons</h3>
+
+      <button class="btn" type="button">CLICK ME</button>
+      <button class="btn btn--hover" type="button">CLICK ME</button>
+
+      <button class="btn btn--border" type="button">CLICK ME</button>
+      <button class="btn btn--border btn--hover" type="button">CLICK ME</button>
+
+      <a href="#" class="btn btn--link">CLICK ME</a>
+      <a href="#" class="btn btn--link">CLICK ME</a>
+
+      <button class="btn btn--arrow" type="button">перейти к оплате</button>
+
+      <!-- Кастомный переключатель страниц -->
+      <h3 class="custom-title-h3">pagination</h3>
+
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="#" class="pagination__item pagination__link--current">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">3</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">...</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">15</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link pagination__link--next">
+              <span class="visually-hidden">Следующая страница</span>
+            </a>
+          </li>
+        </ul>
+        <p class="pagination__label">1 – 12 из 100+ вариантов аренды</p>
+      </div>
+    </div>
   </section>
+
+
 </body>
 
 </html>
