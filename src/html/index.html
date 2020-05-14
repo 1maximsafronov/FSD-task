@@ -289,6 +289,79 @@
     </div>
   </section>
 
+  <div class="ui-kit__cards">
+    <div class="container">
+
+      <div class="ui-kit__column-m">
+
+        <!-- Форма поиска -->
+        <form class="search-form" action="#" method="post">
+          <h2 class="search-form__title custom-title-h1">Найдём номера под ваши пожелания</h2>
+        </form>
+
+        <!-- Форма регистрации пользователя -->
+        <form class="reg-form" action="#" method="post">
+          <h2 class="reg-form__title custom-title-h1">Регистрация аккаунта</h2>
+
+          <p class="reg-form__text-field custom-text-field">
+            <label class="visually-hidden" for="user-name">Имя пользователя</label>
+            <input type="text" name="user-name" id="user-name" value="" placeholder="Имя">
+          </p>
+
+          <p class="reg-form__text-field custom-text-field">
+            <label class="visually-hidden" for="user-surname">Имя пользователя</label>
+            <input type="text" name="user-surname" id="user-surname" value="" placeholder="Фамилия">
+          </p>
+
+          <div class="reg-form__gender">
+            <p class="reg-form__radiobtn custom-radiobtn">
+              <input class="visually-hidden" type="radio" name="reg-form-gender" id="reg-form-male" value="reg-form-male" checked>
+              <label for="reg-form-male">Мужчина</label>
+            </p>
+
+            <p class="reg-form__radiobtn custom-radiobtn">
+              <input class="visually-hidden" type="radio" name="reg-form-gender" id="reg-form-female" value="reg-form-female">
+              <label for="reg-form-female">Женщина</label>
+            </p>
+          </div>
+
+          <p class="reg-form__text-field reg-form__birthdate custom-text-field">
+            <label class="" for="user-birthdate">дата рождения</label>
+            <input type="text" name="user-birthdate" id="user-birthdate" value="" placeholder="ДД.ММ.ГГГГ">
+          </p>
+
+          <div class="reg-form__login-data">
+            <h2 class="reg-form__label custom-title-h3">данные для входа в сервис</h2>
+
+            <p class="reg-form__text-field custom-text-field">
+              <label class="visually-hidden" for="user-email">Email пользователя</label>
+              <input type="email" name="user-email" id="user-email" value="" placeholder="Email">
+            </p>
+
+            <p class="reg-form__text-field custom-text-field">
+              <label class="visually-hidden" for="user-password">Пароль пользователя</label>
+              <input type="password" name="user-password" id="user-password" value="" placeholder="Пароль">
+            </p>
+
+            <p class="reg-form__toggler custom-toggler">
+              <input class="visually-hidden" type="checkbox" name="reg-form-subsribe-toggler" id="reg-form-subsribe-toggler" value="">
+              <label for="reg-form-subsribe-toggler">Получать спецпредложения</label>
+            </p>
+          </div>
+          <button class="reg-form__btn btn btn--arrow" type="submit">перейти к оплате</button>
+
+          <p class="reg-form__is-logined">Уже есть аккаунт на Toxin<a class="reg-form__login-btn btn btn--border" href="login.html">Войти</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="ui-kit__column-m"></div>
+
+      <div class="ui-kit__column"></div>
+
+    </div>
+  </div>
+
   <div class="ui-kit__headers-adn-footers">
 
     <!-- Шапка с НЕ залогиненым пользователем -->
