@@ -1,7 +1,6 @@
 .ui-kit__colors-and-text {
   display: flex;
 
-  margin: 0;
   padding-top: 145px;
   padding-bottom: 145px;
 
@@ -10,6 +9,14 @@
 
 
 .ui-kit__form-elements {
+  display: flex;
+
   padding-top: 145px;
   padding-bottom: 145px;
+
+  justify-content: space-between;
+}
+
+.ui-kit__column {
+  width: 320px;
 }
