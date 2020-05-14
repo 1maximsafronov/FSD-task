@@ -1,0 +1,30 @@
+.texts {
+  width: 410px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.texts__item {
+  display: flex;
+
+  margin-bottom: 50px;
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.texts__type {
+  min-width: 40px;
+  margin: 0;
+  margin-right: 30px;
+
+  text-align: right;
+
+  color: $color-dark-shade-25;
+
+  font-weight: normal;
+}
