@@ -1,0 +1,174 @@
+.calendar {
+  box-sizing: border-box;
+  width: 320px;
+  padding: 20px;
+
+  border: 1px solid $color-dark-shade-25;
+  border-radius: 4px;
+  background: $color-white;
+  box-shadow: 0 10px 20px $color-dark-shade-5;
+}
+
+.calendar__header {
+  display: flex;
+
+  margin-bottom: 30px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar__title {
+  margin: 0;
+
+  text-align: center;
+}
+
+.calendar__control {
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  &--prev {
+    transform: rotate(180deg);
+
+    background-image: url("/img/icon-arrow-purple.svg");
+  }
+
+  &--next {
+    background-image: url("/img/icon-arrow-purple.svg");
+  }
+}
+
+.calendar__content {
+  margin-bottom: 20px;
+}
+
+.calendar__table {
+  width: 100%;
+
+  tr {
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  th,
+  td {
+    display: flex;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 12px;
+    line-height: 15;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  td {
+    color: $color-dark-shade-50;
+  }
+
+  .calendar__weekdays {
+    color: $color-purpule;
+
+    font-weight: bold;
+  }
+
+  .calendar__current-day {
+    color: $color-white;
+    border-radius: 50%;
+    background: $gradient-secondary;
+
+    font-weight: bold;
+  }
+
+  .calendar__selected-day {
+    color: $color-white;
+    border-radius: 50%;
+    background: $gradient-primary;
+
+    font-weight: bold;
+
+    &--first {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+
+        content: "";
+
+        opacity: 0.25;
+        background: $gradient-primary;
+      }
+    }
+
+    &--last {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 50%;
+        bottom: 0;
+        left: 0;
+
+        content: "";
+
+        opacity: 0.25;
+        background: $gradient-primary;
+      }
+    }
+  }
+
+  .calendar__days-range {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+
+      opacity: 0.25;
+      background: $gradient-primary;
+    }
+  }
+}
+
+.calendar__footer {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.calendar__reset-btn {
+  margin: 0;
+  padding: 0;
+
+  color: $color-dark-shade-50;
+}
+
+.calendar__accept-btn {
+  margin: 0;
+  padding: 0;
+}

@@ -356,6 +356,8 @@
       </div>
 
       <div class="ui-kit__column-m">
+
+        <!-- Форма входа -->
         <form class="login-form" action="#" method="post">
           <h2 class="login-form__title custom-title-h1">Войти</h2>
 
@@ -376,7 +378,83 @@
         </form>
       </div>
 
-      <div class="ui-kit__column"></div>
+      <div class="ui-kit__column">
+        <article class="calendar">
+          <header class="calendar__header">
+            <button class="calendar__control calendar__control--prev">
+              <span class="visually-hidden">Предыдущий месяц</span>
+            </button>
+            <h1 class="calendar__title custom-title-h2">Август 2019</h1>
+            <button class="calendar__control calendar__control--next">
+              <span class="visually-hidden">Следующий месяц</span>
+            </button>
+          </header>
+
+          <div class="calendar__content">
+            <table class="calendar__table">
+              <tr class="calendar__weekdays">
+                <th>Пн</th>
+                <th>Вт</th>
+                <th>Ср</th>
+                <th>Чт</th>
+                <th>Пт</th>
+                <th>Сб</th>
+                <th>Вс</th>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td class="calendar__current-day">8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td class="calendar__selected-day calendar__selected-day--first">19</td>
+                <td class="calendar__days-range">20</td>
+                <td class="calendar__days-range">21</td>
+                <td class="calendar__days-range">22</td>
+                <td class="calendar__selected-day calendar__selected-day--last">23</td>
+                <td>24</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="calendar__footer">
+          <button type="button" class="calendar__reset-btn btn btn--link">очистить</button>
+          <button type="button" class="calendar__accept-btn btn btn--link">применить</button>
+          </div>
+        </article>
+      </div>
 
     </div>
   </div>
