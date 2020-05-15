@@ -54,4 +54,31 @@
       border-color: $color-dark-shade-50;
     }
   }
+
+  &--subscribe {
+    position: relative;
+
+    input {
+      padding-right: 44px;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      display: block;
+
+      width: 44px;
+      height: 44px;
+
+      cursor: pointer;
+
+      border: none;
+      background: none;
+      background-image: url("/img/icon-arrow-purple.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+  }
 }
