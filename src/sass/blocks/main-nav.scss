@@ -1,8 +1,11 @@
 .main-nav {
   display: flex;
-  justify-content: space-between;
+
   padding-top: 15px;
   padding-bottom: 15px;
+
+  justify-content: flex-end;
+  flex-wrap: wrap;
   align-items: center;
 }
 

@@ -3,10 +3,14 @@
 }
 
 .pagination__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: flex;
+
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  list-style: none;
+
   justify-content: space-between;
 }
 
@@ -16,22 +20,28 @@
 }
 
 .pagination__link {
+  display: flex;
+
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  text-decoration: none;
+
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  text-decoration: none;
+
   color: $color-dark-shade-50;
+  border-radius: 50%;
+
   font-size: 12px;
   line-height: 15;
 
+  justify-content: center;
+  align-items: center;
+
   &--current {
-    background: $gradient-primary;
-    font-weight: bold;
     color: $color-white;
+    background: $gradient-primary;
+
+    font-weight: bold;
   }
 
   &--next {
@@ -42,5 +52,7 @@
 }
 
 .pagination__label {
+  margin: 0;
+
   text-align: center;
 }

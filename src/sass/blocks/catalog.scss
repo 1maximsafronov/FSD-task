@@ -1,0 +1,41 @@
+.catalog {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.catalog__filter {
+  width: 266px;
+}
+
+.catalog__content {
+  width: 834px;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.catalog__list {
+  display: flex;
+
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog__item {
+  margin-bottom: 20px;
+}
+
+.catalog__pagination {
+  display: flex;
+
+  justify-content: center;
+}
