@@ -1,0 +1,35 @@
+.main-content {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content__login-wrapper {
+  position: relative;
+
+  min-height: 702px;
+
+  background-image: url("/img/login-page-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: cover;
+}
+
+.main-content__login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 380px;
+
+  transform: translate(-50%, -50%);
+}
+
+.main-content__reg-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 380px;
+
+  transform: translate(-50%, -50%);
+}

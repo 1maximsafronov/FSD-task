@@ -1,4 +1,7 @@
 .date-dropdown {
+  position: relative;
+  z-index: 1;
+
   display: flex;
 
   margin: 0;
@@ -12,5 +15,23 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.date-dropdown__popup {
+  position: absolute;
+  z-index: 2;
+  bottom: -5px;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  margin: 0;
+
+  transform: translateY(100%);
+
+  &--show {
+    display: block;
   }
 }
