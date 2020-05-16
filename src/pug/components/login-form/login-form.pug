@@ -1,0 +1,17 @@
+mixin login-form
+  form.login-form(action='#', method='post', class= attributes.class)
+
+    h2.login-form__title.custom-title-h1 Войти
+
+    p.login-form__text-field.custom-text-field
+      label.visually-hidden(for='user-email') Email пользователя
+      input#user-email(type='email', name='user-email', value='', placeholder='Email')
+
+    p.login-form__text-field.custom-text-field
+      label.visually-hidden(for='user-password') Пароль пользователя
+      input#user-password(type='password', name='user-password', value='', placeholder='Пароль')
+    button.login-form__btn.btn.btn--arrow(type='submit') войти
+
+    p.login-form__is-logined
+      | Нет аккаунта на Toxin?
+      a.login-form__reg-btn.btn.btn--border(href='registration.html') создать

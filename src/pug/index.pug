@@ -1,0 +1,14 @@
+extends common/layout
+
+block variables
+  - var pageTitle = "Найдём номера под ваши пожелания"
+
+block content
+  main.main-content.main-content--landing-page
+    h1.visually-hidden Найдём номера под ваши пожелания
+    .container
+
+      //- Форма Поиска
+      +search-form(class="main-content__search-form")
+
+      p.main-content__landing-promo Лучшие номера для вашей работы, отдыха и просто вдохновения

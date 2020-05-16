@@ -1,0 +1,30 @@
+include ../components/login-form/login-form
+include ../components/reg-form/reg-form
+include ../components/search-form/search-form
+
+block variables
+  -var pageTitle = "";
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    title #{pageTitle}
+    link(rel="stylesheet" href="css/style.css")
+
+    block head
+
+  body
+    block header
+      include header
+
+    block content
+
+    block footer
+      include footer
+
+    block script
+      script(src="js/main.js")

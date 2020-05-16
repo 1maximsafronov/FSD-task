@@ -1,0 +1,11 @@
+extends common/layout
+
+block variables
+  - var pageTitle = "Вход"
+
+block content
+  main.main-content.main-content--login-page
+    .main-content__wrapper
+
+      //- Форма Логина
+      +login-form(class="main-content__login-form")
