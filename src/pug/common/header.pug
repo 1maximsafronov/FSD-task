@@ -1,11 +1,10 @@
+include ../components/logo/logo
 
 header.main-header
   nav.main-nav.container
 
     // Логотип
-    p.main-nav__logo.logo
-      a.logo__link(href='index.html')
-        img.logo__image(src='/img/logo.svg', alt='', width='106', height='40')
+    +logo(class="main-nav__logo")
 
     // Навигация по сайту
     ul.main-nav__site-nav.site-nav

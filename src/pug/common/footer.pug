@@ -1,13 +1,15 @@
 include ../components/social/social
+include ../components/logo/logo
 
 footer.main-footer
   .main-footer__wrapper.container
 
     // Краткое описание в футере
     .main-footer__desc
-      p.main-footer__logo.logo
-        a.logo__link(href='#')
-          img.logo__image(src='/img/logo.svg', alt='', width='106', height='40')
+
+      // Логотип
+      +logo(class="main-footer__logo")
+
       p.main-footer__desc-text
         | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
