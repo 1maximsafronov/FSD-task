@@ -1,6 +1,7 @@
 extends common/layout
 include components/pagination/pagination
 include components/hotel-card/hotel-card
+include components/filter-form/filter-form
 
 block variables
   - var pageTitle = "Каталог"
@@ -8,28 +9,9 @@ block variables
 block content
   main.main-content
     .main-content__catalog.container.catalog
-      form.catalog__filter(action='')
-        p.custom-dropdown
-          label(for='')
-            | даты пребывания в отеле
-          input(type='text', name='', id='', value='19 авг - 23 авг', placeholder='', readonly='')
-        p.custom-dropdown
-          label(for='')
-            | гости
-          input(type='text', name='', id='', value='3 гостя, 1 младенец', placeholder='', readonly='')
-        h3.custom-title-h3 Checkbox Buttons
-        p.custom-checkbox
-          input#smoking.visually-hidden(type='checkbox', name='smoking', value='smoking')
-          label(for='smoking') Можно курить
-        p.custom-checkbox
-          input#pets.visually-hidden(type='checkbox', name='pets', value='pets', checked='')
-          label(for='pets') Можно с питомцами
-        p.custom-checkbox
-          input#guests.visually-hidden(type='checkbox', name='guests', value='guests', checked='')
-          label(for='guests') Можно пригласить гостей (до 10 человек)
+      +filter-form(class="catalog__filter")
 
       section.catalog__content
-
         h1.catalog__title.custom-title-h1 Номера, которые мы для вас подобрали
 
         ul.catalog__list

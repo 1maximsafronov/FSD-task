@@ -1,0 +1,20 @@
+mixin filter-form
+  form.filter-form(action='', class= attributes.class)
+    p.custom-dropdown
+      label(for='')
+        | даты пребывания в отеле
+      input(type='text', name='', id='', value='19 авг - 23 авг', placeholder='', readonly='')
+    p.custom-dropdown
+      label(for='')
+        | гости
+      input(type='text', name='', id='', value='3 гостя, 1 младенец', placeholder='', readonly='')
+    h3.custom-title-h3 Checkbox Buttons
+    p.custom-checkbox
+      input#smoking.visually-hidden(type='checkbox', name='smoking', value='smoking')
+      label(for='smoking') Можно курить
+    p.custom-checkbox
+      input#pets.visually-hidden(type='checkbox', name='pets', value='pets', checked='')
+      label(for='pets') Можно с питомцами
+    p.custom-checkbox
+      input#guests.visually-hidden(type='checkbox', name='guests', value='guests', checked='')
+      label(for='guests') Можно пригласить гостей (до 10 человек)
