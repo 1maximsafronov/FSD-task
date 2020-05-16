@@ -1,69 +1,11 @@
+include ../calendar/calendar
+
 mixin search-form
   form.search-form(action='#', method='post', class= attributes.class)
     h2.search-form__title.custom-title-h1 Найдём номера под ваши пожелания
     .search-form__date.date-dropdown
 
-      article.date-dropdown__popup.calendar
-        header.calendar__header
-          button.calendar__control.calendar__control--prev
-            span.visually-hidden Предыдущий месяц
-          h1.calendar__title.custom-title-h2 Август 2019
-          button.calendar__control.calendar__control--next
-            span.visually-hidden Следующий месяц
-        .calendar__content
-          table.calendar__table
-            tbody
-              tr.calendar__weekdays
-                th Пн
-                th Вт
-                th Ср
-                th Чт
-                th Пт
-                th Сб
-                th Вс
-              tr
-                td 29
-                td 30
-                td 31
-                td 1
-                td 2
-                td 3
-                td 4
-              tr
-                td 5
-                td 6
-                td 7
-                td.calendar__current-day 8
-                td 9
-                td 10
-                td 11
-              tr
-                td 12
-                td 13
-                td 14
-                td 15
-                td 16
-                td 17
-                td 18
-              tr
-                td.calendar__selected-day.calendar__selected-day--first 19
-                td.calendar__days-range 20
-                td.calendar__days-range 21
-                td.calendar__days-range 22
-                td.calendar__selected-day.calendar__selected-day--last 23
-                td 24
-                td 25
-              tr
-                td 26
-                td 27
-                td 28
-                td 29
-                td 30
-                td 31
-                td 1
-        .calendar__footer
-          button.calendar__reset-btn.btn.btn--link(type='button') очистить
-          button.calendar__accept-btn.btn.btn--link(type='button') применить
+      +calendar(class="date-dropdown__popup")
 
       p.date-dropdown__item.custom-dropdown
         label(for='arrival-date')
