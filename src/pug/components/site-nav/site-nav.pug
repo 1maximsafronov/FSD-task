@@ -1,0 +1,19 @@
+mixin site-nav
+  ul.site-nav(class= attributes.class)
+    li.site-nav__item
+      a.site-nav__link(href='#') О нас
+    li.site-nav__item.site-nav__item--sub-nav
+      a.site-nav__link(href='#') Услуги
+      ul.site-nav__sub-nav.sub-nav
+        li.sub-nav__item
+          a.sub-nav__link(href='#') ССылка
+        li.sub-nav__item
+          a.sub-nav__link(href='#') ССылка
+        li.sub-nav__item
+          a.sub-nav__link(href='#') ССылка
+    li.site-nav__item
+      a.site-nav__link(href='#') Вакансии
+    li.site-nav__item
+      a.site-nav__link(href='#') Новости
+    li.site-nav__item.site-nav__item--sub-nav
+      a.site-nav__link(href='#') Соглашения

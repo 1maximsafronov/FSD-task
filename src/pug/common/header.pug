@@ -1,4 +1,5 @@
 include ../components/logo/logo
+include ../components/site-nav/site-nav
 
 header.main-header
   nav.main-nav.container
@@ -7,24 +8,7 @@ header.main-header
     +logo(class="main-nav__logo")
 
     // Навигация по сайту
-    ul.main-nav__site-nav.site-nav
-      li.site-nav__item
-        a.site-nav__link(href='#') О нас
-      li.site-nav__item.site-nav__item--sub-nav
-        a.site-nav__link(href='#') Услуги
-        ul.site-nav__sub-nav.sub-nav
-          li.sub-nav__item
-            a.sub-nav__link(href='#') ССылка
-          li.sub-nav__item
-            a.sub-nav__link(href='#') ССылка
-          li.sub-nav__item
-            a.sub-nav__link(href='#') ССылка
-      li.site-nav__item
-        a.site-nav__link(href='#') Вакансии
-      li.site-nav__item
-        a.site-nav__link(href='#') Новости
-      li.site-nav__item.site-nav__item--sub-nav
-        a.site-nav__link(href='#') Соглашения
+    +site-nav(class="main-nav__site-nav")
 
     // Пользовательская навигация
     .main-nav__user-nav.user-nav
