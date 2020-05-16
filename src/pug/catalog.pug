@@ -9,11 +9,14 @@ block variables
 block content
   main.main-content
     .main-content__catalog.container.catalog
+
+      // Форма фильтрации отелей
       +filter-form(class="catalog__filter")
 
       section.catalog__content
         h1.catalog__title.custom-title-h1 Номера, которые мы для вас подобрали
 
+        // Список номеров
         ul.catalog__list
           li.catalog__item
             +hotel-card

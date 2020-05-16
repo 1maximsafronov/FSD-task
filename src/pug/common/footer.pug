@@ -1,3 +1,5 @@
+include ../components/social/social
+
 footer.main-footer
   .main-footer__wrapper.container
 
@@ -61,13 +63,4 @@ footer.main-footer
       p.copyright__text Copyright © 2018 Toxin отель. Все права зачищены.
 
       // Социальные ссылки
-      ul.copyright__social.social
-        li.social__item
-          a.social__link.social__link--twitter(href='#')
-            span.visually-hidden Наш Твиттер
-        li.social__item
-          a.social__link.social__link--facebook(href='#')
-            span.visually-hidden Наша страница в Фейсбуке
-        li.social__item
-          a.social__link.social__link--instagram(href='#')
-            span.visually-hidden Наш профиль в Инстаграм
+      +social(class="copyright__social")
