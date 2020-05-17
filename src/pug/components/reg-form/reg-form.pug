@@ -1,15 +1,32 @@
+include ../custom-text-field/custom-text-field
+
+
 mixin reg-form
   form.reg-form(action='#', method='post', class= attributes.class)
 
     h2.reg-form__title.custom-title-h1 Регистрация аккаунта
-
-    p.reg-form__text-field.custom-text-field
-      label.visually-hidden(for='user-name') Имя пользователя
-      input#user-name(type='text', name='user-name', value='', placeholder='Имя')
-
-    p.reg-form__text-field.custom-text-field
-      label.visually-hidden(for='user-surname') Имя пользователя
-      input#user-surname(type='text', name='user-surname', value='', placeholder='Фамилия')
+    // Поле Имя пользователя
+    +custom-text-field({
+      className: "reg-form__text-field",
+      label: "Имя пользователя",
+      isLabelShown: 0,
+      id: "user-name",
+      type: "text",
+      name: "user-name",
+      value: "",
+      placeholder: "Имя"
+    })
+    // Поле Фамилия пользователя
+    +custom-text-field({
+      className: "reg-form__text-field",
+      label: "Фамилия пользователя",
+      isLabelShown: 0,
+      id: "user-surname",
+      type: "text",
+      name: "user-surname",
+      value: "",
+      placeholder: "Фамилия"
+    })
 
     .reg-form__gender
       p.reg-form__radiobtn.custom-radiobtn
@@ -19,18 +36,43 @@ mixin reg-form
         input#reg-form-female.visually-hidden(type='radio', name='reg-form-gender', value='reg-form-female')
         label(for='reg-form-female') Женщина
 
-    p.reg-form__text-field.reg-form__birthdate.custom-text-field
-      label(for='user-birthdate') дата рождения
-      input#user-birthdate(type='text', name='user-birthdate', value='', placeholder='ДД.ММ.ГГГГ')
+    // Поле дата рождения
+    +custom-text-field({
+      className: "reg-form__text-field reg-form__birthdate",
+      label: "Дата рождения",
+      isLabelShown: 1,
+      id: "user-birthdate",
+      type: "text",
+      name: "user-birthdate",
+      value: "",
+      placeholder: "ДД.ММ.ГГГГ"
+    })
 
     .reg-form__login-data
       h3.reg-form__label.custom-title-h3 данные для входа в сервис
-      p.reg-form__text-field.custom-text-field
-        label.visually-hidden(for='user-email') Email пользователя
-        input#user-email(type='email', name='user-email', value='', placeholder='Email')
-      p.reg-form__text-field.custom-text-field
-        label.visually-hidden(for='user-password') Пароль пользователя
-        input#user-password(type='password', name='user-password', value='', placeholder='Пароль')
+      // Поле Email пользователя
+      +custom-text-field({
+        className: "reg-form__text-field",
+        label: "Email пользователя",
+        isLabelShown: 0,
+        id: "user-email",
+        type: "email",
+        name: "user-email",
+        value: "",
+        placeholder: "Email"
+      })
+      // Поле Пароль пользователя
+      +custom-text-field({
+        className: "reg-form__text-field",
+        label: "Пароль пользователя",
+        isLabelShown: 0,
+        id: "user-password",
+        type: "password",
+        name: "user-password",
+        value: "",
+        placeholder: "Пароль"
+      })
+
       p.reg-form__toggler.custom-toggler
         input#reg-form-subsribe-toggler.visually-hidden(type='checkbox', name='reg-form-subsribe-toggler', value='')
         label(for='reg-form-subsribe-toggler') Получать спецпредложения

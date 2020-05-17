@@ -1,16 +1,24 @@
-mixin hotel-card
+mixin hotel-card(hotelData)
+
   article.hotel-card(class= attributes.class)
     .hotel-card__gallery
-      img(src='/img/hotel-preview-888.jpg', alt='')
+      //- img(src='/img/hotel-preview-'+ hotelData.number +'.jpg', alt='')
+      img(src=`/img/hotel-preview-${hotelData.number}.jpg`, alt='')
+
     .hotel-card__desc
       .hotel-card__info
         h2.hotel-card__number
           | №
-          span.hotel-card__number-value.custom-title-h2 888
-          span.hotel-card__luxe люкс
+          span.hotel-card__number-value.custom-title-h2 #{hotelData.number}
+
+          if hotelData.isLuxe
+            span.hotel-card__luxe
+              |  люкс
+
         p.hotel-card__price
-          span 9 990₽
+          span #{hotelData.price}₽
           |  в сутки
+
       .hotel-card__rate
         ul.hotel-card__rate-btn.custom-rate-btn
           li.custom-rate-btn__item.custom-rate-btn__item--active
@@ -19,5 +27,5 @@ mixin hotel-card
           li.custom-rate-btn__item.custom-rate-btn__item--active
           li.custom-rate-btn__item.custom-rate-btn__item--active
         p.hotel-card__feedback
-          span 145
+          span #{hotelData.feedback}
           |  Отзывов

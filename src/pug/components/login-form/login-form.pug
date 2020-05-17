@@ -3,13 +3,29 @@ mixin login-form
 
     h2.login-form__title.custom-title-h1 Войти
 
-    p.login-form__text-field.custom-text-field
-      label.visually-hidden(for='user-email') Email пользователя
-      input#user-email(type='email', name='user-email', value='', placeholder='Email')
+    // Поле Email пользователя
+    +custom-text-field({
+      className: "login-form__text-field",
+      label: "Email пользователя",
+      isLabelShown: 0,
+      id: "user-email",
+      type: "email",
+      name: "user-email",
+      value: "",
+      placeholder: "Email"
+    })
 
-    p.login-form__text-field.custom-text-field
-      label.visually-hidden(for='user-password') Пароль пользователя
-      input#user-password(type='password', name='user-password', value='', placeholder='Пароль')
+    // Поле Пароль пользователя
+    +custom-text-field({
+      className: "login-form__text-field",
+      label: "Пароль пользователя",
+      isLabelShown: 0,
+      id: "user-password",
+      type: "password",
+      name: "user-password",
+      value: "",
+      placeholder: "Пароль"
+    })
 
     button.login-form__btn.btn.btn--arrow(type='submit') войти
 
