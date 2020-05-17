@@ -6,9 +6,11 @@ block variables
 block content
   main.main-content.main-content--landing-page
     h1.visually-hidden Найдём номера под ваши пожелания
-    .container
+    .main-content__wrapper.container
 
       // Форма Поиска
       +search-form(class="main-content__search-form")
 
-      p.main-content__landing-promo Лучшие номера для вашей работы, отдыха и просто вдохновения
+    .main-content__promo
+      .container
+        p.main-content__promo-text Лучшие номера для вашей работы, отдыха и просто вдохновения

@@ -26,7 +26,6 @@
   }
 }
 
-
 .main-content__login-form {
   position: absolute;
   top: 50%;
@@ -52,13 +51,17 @@
   width: 380px;
 }
 
-.main-content__landing-promo {
+.main-content__promo {
   position: absolute;
-  right: 20%;
   bottom: 18px;
 
+  width: 100%;
+}
+
+.main-content__promo-text {
   width: 300px;
   margin: 0;
+  margin-left: auto;
 
   text-align: right;
 }
