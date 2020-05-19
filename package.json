@@ -34,7 +34,7 @@
     "eslint-config-htmlacademy": "0.5.2",
     "editorconfig": "^0.15.3",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "stylelint": "^13.4.1",
+    "stylelint": "^13.5.0",
     "stylelint-config-htmlacademy": "^0.1.4",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
