@@ -1,217 +1,321 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Регистрация</title>
-</head>
-<body>
-  <header class="main-header">
-    <nav class="main-nav container">
-      <p class="main-nav__logo logo">
-        <a href="#" class="logo__link">
-          <img class="logo__image" src="/img/logo.svg" alt="" width="106" height="40">
-        </a>
-      </p>
-
-      <ul class="main-nav__site-nav site-nav">
-        <li class="site-nav__item">
-          <a href="#" class="site-nav__link">О нас</a>
-        </li>
-        <li class="site-nav__item site-nav__item--sub-nav">
-          <a href="#" class="site-nav__link">Услуги</a>
-          <ul class="site-nav__sub-nav sub-nav">
-            <li class="sub-nav__item">
-              <a href="#" class="sub-nav__link">ССылка</a>
-            </li>
-            <li class="sub-nav__item">
-              <a href="#" class="sub-nav__link">ССылка</a></li>
-            <li class="sub-nav__item">
-              <a href="#" class="sub-nav__link">ССылка</a>
-            </li>
-          </ul>
-        </li>
-        <li class="site-nav__item">
-          <a href="#" class="site-nav__link">Вакансии</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="#" class="site-nav__link">Новости</a>
-        </li>
-        <li class="site-nav__item site-nav__item--sub-nav">
-          <a href="#" class="site-nav__link">Соглашения</a>
-        </li>
-      </ul>
-
-      <div class="main-nav__user-nav user-nav">
-        <a class="user-nav__btn btn btn--border" href="login.html">войти</a>
-        <a class="user-nav__btn btn" href="registration.html">зарегистрироваться</a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="main-content main-content--login-page">
-    <h1 class="visually-hidden">Страница регистранции аккаунта</h1>
-    <div class="main-content__wrapper">
-      <form class="main-content__reg-form reg-form" action="#" method="post">
-        <h2 class="reg-form__title custom-title-h1">Регистрация аккаунта</h2>
-
-        <p class="reg-form__text-field custom-text-field">
-          <label class="visually-hidden" for="user-name">Имя пользователя</label>
-          <input type="text" name="user-name" id="user-name" value="" placeholder="Имя">
-        </p>
-
-        <p class="reg-form__text-field custom-text-field">
-          <label class="visually-hidden" for="user-surname">Имя пользователя</label>
-          <input type="text" name="user-surname" id="user-surname" value="" placeholder="Фамилия">
-        </p>
-
-        <div class="reg-form__gender">
-          <p class="reg-form__radiobtn custom-radiobtn">
-            <input class="visually-hidden" type="radio" name="reg-form-gender" id="reg-form-male" value="reg-form-male" checked>
-            <label for="reg-form-male">Мужчина</label>
-          </p>
-
-          <p class="reg-form__radiobtn custom-radiobtn">
-            <input class="visually-hidden" type="radio" name="reg-form-gender" id="reg-form-female" value="reg-form-female">
-            <label for="reg-form-female">Женщина</label>
-          </p>
-        </div>
-
-        <p class="reg-form__text-field reg-form__birthdate custom-text-field">
-          <label class="" for="user-birthdate">дата рождения</label>
-          <input type="text" name="user-birthdate" id="user-birthdate" value="" placeholder="ДД.ММ.ГГГГ">
-        </p>
-
-        <div class="reg-form__login-data">
-          <h2 class="reg-form__label custom-title-h3">данные для входа в сервис</h2>
-
-          <p class="reg-form__text-field custom-text-field">
-            <label class="visually-hidden" for="user-email">Email пользователя</label>
-            <input type="email" name="user-email" id="user-email" value="" placeholder="Email">
-          </p>
-
-          <p class="reg-form__text-field custom-text-field">
-            <label class="visually-hidden" for="user-password">Пароль пользователя</label>
-            <input type="password" name="user-password" id="user-password" value="" placeholder="Пароль">
-          </p>
-
-          <p class="reg-form__toggler custom-toggler">
-            <input class="visually-hidden" type="checkbox" name="reg-form-subsribe-toggler" id="reg-form-subsribe-toggler" value="">
-            <label for="reg-form-subsribe-toggler">Получать спецпредложения</label>
-          </p>
-        </div>
-        <button class="reg-form__btn btn btn--arrow" type="submit">перейти к оплате</button>
-
-        <p class="reg-form__is-logined">Уже есть аккаунт на Toxin<a class="reg-form__login-btn btn btn--border" href="login.html">Войти</a>
-        </p>
-      </form>
-    </div>
-  </main>
-
-  <footer class="main-footer">
-    <div class="main-footer__wrapper container">
-
-      <!-- Краткое описание в футере -->
-      <div class="main-footer__desc">
-        <p class="main-footer__logo logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav container">
+        <p class="main-nav__logo logo">
           <a href="#" class="logo__link">
-            <img class="logo__image" src="/img/logo.svg" alt="" width="106" height="40">
+            <img
+              class="logo__image"
+              src="/img/logo.svg"
+              alt=""
+              width="106"
+              height="40"
+            />
           </a>
         </p>
-        <p class="main-footer__desc-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
-      </div>
 
-      <!-- навигация в футере -->
-      <div class="main-footer__nav footer-nav">
-        <h3 class="footer-nav__title custom-title-h3">навигация</h3>
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">О нас</a>
+        <ul class="main-nav__site-nav site-nav">
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">О нас</a>
           </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Новости</a>
+          <li class="site-nav__item site-nav__item--sub-nav">
+            <a href="#" class="site-nav__link">Услуги</a>
+            <ul class="site-nav__sub-nav sub-nav">
+              <li class="sub-nav__item">
+                <a href="#" class="sub-nav__link">ССылка</a>
+              </li>
+              <li class="sub-nav__item">
+                <a href="#" class="sub-nav__link">ССылка</a>
+              </li>
+              <li class="sub-nav__item">
+                <a href="#" class="sub-nav__link">ССылка</a>
+              </li>
+            </ul>
           </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Служба поддержки</a>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">Вакансии</a>
           </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Услуги</a>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">Новости</a>
+          </li>
+          <li class="site-nav__item site-nav__item--sub-nav">
+            <a href="#" class="site-nav__link">Соглашения</a>
           </li>
         </ul>
+
+        <div class="main-nav__user-nav user-nav">
+          <a class="user-nav__btn btn btn--border" href="login.html">войти</a>
+          <a class="user-nav__btn btn" href="registration.html"
+            >зарегистрироваться</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content main-content--login-page">
+      <h1 class="visually-hidden">Страница регистранции аккаунта</h1>
+      <div class="main-content__wrapper">
+        <form class="main-content__reg-form reg-form" action="#" method="post">
+          <h2 class="reg-form__title custom-title-h1">Регистрация аккаунта</h2>
+
+          <p class="reg-form__text-field custom-text-field">
+            <label class="visually-hidden" for="user-name"
+              >Имя пользователя</label
+            >
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              value=""
+              placeholder="Имя"
+            />
+          </p>
+
+          <p class="reg-form__text-field custom-text-field">
+            <label class="visually-hidden" for="user-surname"
+              >Имя пользователя</label
+            >
+            <input
+              type="text"
+              name="user-surname"
+              id="user-surname"
+              value=""
+              placeholder="Фамилия"
+            />
+          </p>
+
+          <div class="reg-form__gender">
+            <p class="reg-form__radiobtn custom-radiobtn">
+              <input
+                class="visually-hidden"
+                type="radio"
+                name="reg-form-gender"
+                id="reg-form-male"
+                value="reg-form-male"
+                checked
+              />
+              <label for="reg-form-male">Мужчина</label>
+            </p>
+
+            <p class="reg-form__radiobtn custom-radiobtn">
+              <input
+                class="visually-hidden"
+                type="radio"
+                name="reg-form-gender"
+                id="reg-form-female"
+                value="reg-form-female"
+              />
+              <label for="reg-form-female">Женщина</label>
+            </p>
+          </div>
+
+          <p class="reg-form__text-field reg-form__birthdate custom-text-field">
+            <label class="" for="user-birthdate">дата рождения</label>
+            <input
+              type="text"
+              name="user-birthdate"
+              id="user-birthdate"
+              value=""
+              placeholder="ДД.ММ.ГГГГ"
+            />
+          </p>
+
+          <div class="reg-form__login-data">
+            <h2 class="reg-form__label custom-title-h3">
+              данные для входа в сервис
+            </h2>
+
+            <p class="reg-form__text-field custom-text-field">
+              <label class="visually-hidden" for="user-email"
+                >Email пользователя</label
+              >
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                value=""
+                placeholder="Email"
+              />
+            </p>
+
+            <p class="reg-form__text-field custom-text-field">
+              <label class="visually-hidden" for="user-password"
+                >Пароль пользователя</label
+              >
+              <input
+                type="password"
+                name="user-password"
+                id="user-password"
+                value=""
+                placeholder="Пароль"
+              />
+            </p>
+
+            <p class="reg-form__toggler custom-toggler">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="reg-form-subsribe-toggler"
+                id="reg-form-subsribe-toggler"
+                value=""
+              />
+              <label for="reg-form-subsribe-toggler"
+                >Получать спецпредложения</label
+              >
+            </p>
+          </div>
+          <button class="reg-form__btn btn btn--arrow" type="submit">
+            перейти к оплате
+          </button>
+
+          <p class="reg-form__is-logined">
+            Уже есть аккаунт на Toxin<a
+              class="reg-form__login-btn btn btn--border"
+              href="login.html"
+              >Войти</a
+            >
+          </p>
+        </form>
       </div>
+    </main>
 
-      <!-- навигация в футере -->
-      <div class="main-footer__nav footer-nav">
-        <h3 class="footer-nav__title custom-title-h3">о нас</h3>
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">О сервисе</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Наша команда</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Вакансии</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Инвесторы</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- навигация в футере -->
-      <div class="main-footer__nav footer-nav">
-        <h3 class="footer-nav__title custom-title-h3">Служба поддержки</h3>
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Соглашения</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Сообщества</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="" class="footer-nav__link">Связь с нами</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Виджет подписки -->
-      <form class="main-footer__subscribe subscribe-widget" action="#" method="post">
-        <h3 class="subscribe-widget__title custom-title-h3">Подписка</h3>
-        <p class="subscribe-widget__text">Получайте специальные предложения и новости сервиса</p>
-        <p class="subscribe-widget__text-field custom-text-field custom-text-field--subscribe">
-          <label class="visually-hidden" for="subscribe-email">Подписка</label>
-          <input type="email" name="subscribe-email" id="subscribe-email" value="" placeholder="Your email address">
-          <button class="custom-text-field__button" type="submit"><span class="visually-hidden">Подписаться</span></button>
-        </p>
-      </form>
-
-    </div>
-
-    <div class="main-footer__copyright copyright">
-      <div class="copyright__wrapper container">
-        <p class="copyright__text">Copyright © 2018 Toxin отель. Все права зачищены.</p>
-        <!-- Социальные ссылки -->
-        <ul class="copyright__social social">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--twitter">
-              <span class="visually-hidden">Наш Твиттер</span>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper container">
+        <!-- Краткое описание в футере -->
+        <div class="main-footer__desc">
+          <p class="main-footer__logo logo">
+            <a href="#" class="logo__link">
+              <img
+                class="logo__image"
+                src="/img/logo.svg"
+                alt=""
+                width="106"
+                height="40"
+              />
             </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--facebook">
-              <span class="visually-hidden">Наша страница в Фейсбуке</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--instagram">
-              <span class="visually-hidden">Наш профиль в Инстаграм</span>
-            </a>
-          </li>
-        </ul>
+          </p>
+          <p class="main-footer__desc-text">
+            Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
+            «Отельные взгляды»
+          </p>
+        </div>
+
+        <!-- навигация в футере -->
+        <div class="main-footer__nav footer-nav">
+          <h3 class="footer-nav__title custom-title-h3">навигация</h3>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">О нас</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Новости</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Служба поддержки</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Услуги</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- навигация в футере -->
+        <div class="main-footer__nav footer-nav">
+          <h3 class="footer-nav__title custom-title-h3">о нас</h3>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">О сервисе</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Наша команда</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Вакансии</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Инвесторы</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- навигация в футере -->
+        <div class="main-footer__nav footer-nav">
+          <h3 class="footer-nav__title custom-title-h3">Служба поддержки</h3>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Соглашения</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Сообщества</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Связь с нами</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Виджет подписки -->
+        <form
+          class="main-footer__subscribe subscribe-widget"
+          action="#"
+          method="post"
+        >
+          <h3 class="subscribe-widget__title custom-title-h3">Подписка</h3>
+          <p class="subscribe-widget__text">
+            Получайте специальные предложения и новости сервиса
+          </p>
+          <p
+            class="subscribe-widget__text-field custom-text-field custom-text-field--subscribe"
+          >
+            <label class="visually-hidden" for="subscribe-email"
+              >Подписка</label
+            >
+            <input
+              type="email"
+              name="subscribe-email"
+              id="subscribe-email"
+              value=""
+              placeholder="Your email address"
+            />
+            <button class="custom-text-field__button" type="submit">
+              <span class="visually-hidden">Подписаться</span>
+            </button>
+          </p>
+        </form>
       </div>
-    </div>
-  </footer>
-</body>
+
+      <div class="main-footer__copyright copyright">
+        <div class="copyright__wrapper container">
+          <p class="copyright__text">
+            Copyright © 2018 Toxin отель. Все права зачищены.
+          </p>
+          <!-- Социальные ссылки -->
+          <ul class="copyright__social social">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--twitter">
+                <span class="visually-hidden">Наш Твиттер</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">
+                <span class="visually-hidden">Наша страница в Фейсбуке</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--instagram">
+                <span class="visually-hidden">Наш профиль в Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
