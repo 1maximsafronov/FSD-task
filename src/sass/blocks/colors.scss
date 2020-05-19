@@ -54,14 +54,13 @@
 .colors__desc {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   color: $color-dark-shade-100;
 
   font-family: $font-secondery;
   font-size: 19px;
   line-height: 29px;
-
-  justify-content: center;
 }
 
 .colors__name {

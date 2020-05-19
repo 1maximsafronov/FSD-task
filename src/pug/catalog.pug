@@ -1,4 +1,5 @@
 extends common/layout
+
 include components/pagination/pagination
 include components/hotel-card/hotel-card
 include components/filter-form/filter-form
@@ -6,7 +7,21 @@ include components/filter-form/filter-form
 block variables
   - var pageTitle = "Каталог";
 
-  - var hotelsData = [{ number: "888",isLuxe: 1, price: "9 990", feedback: "145" }, { number: "840", price: "9 900", feedback: "65" }, { number: "980", isLuxe: 1, price: "8 500", feedback: "35" }, { number: "856", price: "7 300", feedback: "19" }, { number: "740", price: "6 000", feedback: "44" }, { number: "982", price: "5 800", feedback: "56" }, { number: "678", price: "5 500", feedback: "45" }, { number: "450", price: "5 300", feedback: "39" }, { number: "350", price: "5 000", feedback: "77" }, { number: "666", price: "5 000", feedback: "25" }, { number: "444", price: "5 000", feedback: "15" }, { number: "352", price: "5 000", feedback: "55" }];
+  //- Массив данных о номерах отеля
+  - var hotelsData = [
+  -  { number: "888", price: "9 990", feedback: "145", isLuxe: true },
+  -  { number: "840", price: "9 900", feedback: "65" },
+  -  { number: "980", price: "8 500", feedback: "35", isLuxe: true },
+  -  { number: "856", price: "7 300", feedback: "19" },
+  -  { number: "740", price: "6 000", feedback: "44" },
+  -  { number: "982", price: "5 800", feedback: "56" },
+  -  { number: "678", price: "5 500", feedback: "45" },
+  -  { number: "450", price: "5 300", feedback: "39" },
+  -  { number: "350", price: "5 000", feedback: "77" },
+  -  { number: "666", price: "5 000", feedback: "25" },
+  -  { number: "444", price: "5 000", feedback: "15" },
+  -  { number: "352", price: "5 000", feedback: "55" }
+  - ];
 
 block content
   main.main-content
@@ -19,42 +34,10 @@ block content
 
         // Список номеров
         ul.catalog__list
-          li.catalog__item
-            +hotel-card(hotelsData[0])
+          each hotel in hotelsData
+            li.catalog__item
+              +hotel-card(hotel)
 
-          li.catalog__item
-            +hotel-card(hotelsData[1])
-
-          li.catalog__item
-            +hotel-card(hotelsData[2])
-
-          li.catalog__item
-            +hotel-card(hotelsData[3])
-
-          li.catalog__item
-            +hotel-card(hotelsData[4])
-
-          li.catalog__item
-            +hotel-card(hotelsData[5])
-
-          li.catalog__item
-            +hotel-card(hotelsData[6])
-
-          li.catalog__item
-            +hotel-card(hotelsData[7])
-
-          li.catalog__item
-            +hotel-card(hotelsData[8])
-
-          li.catalog__item
-            +hotel-card(hotelsData[9])
-
-          li.catalog__item
-            +hotel-card(hotelsData[10])
-
-          li.catalog__item
-            +hotel-card(hotelsData[11])
-
+        // Постраничная навигация
         .catalog__pagination
-          // Постраничная навигация
           +pagination

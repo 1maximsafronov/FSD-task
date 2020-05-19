@@ -3,6 +3,7 @@
 
   label {
     display: flex;
+    justify-content: space-between;
 
     margin-bottom: 5px;
 
@@ -14,8 +15,6 @@
     font-weight: bold;
     font-style: normal;
     line-height: 15px;
-
-    justify-content: space-between;
 
     span {
       text-align: right;

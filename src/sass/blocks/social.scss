@@ -1,7 +1,9 @@
 .social {
-  padding: 0;
-  list-style: none;
   display: flex;
+
+  padding: 0;
+
+  list-style: none;
 }
 
 .social__item {
@@ -13,12 +15,15 @@
 }
 
 .social__link {
+  display: block;
+
   width: 24px;
   height: 24px;
-  display: block;
+
   text-decoration: none;
-  background-position: 50%;
+
   background-repeat: no-repeat;
+  background-position: 50%;
 
   &--twitter {
     background-image: url("/img/icon-twitter.svg");

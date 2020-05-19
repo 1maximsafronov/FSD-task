@@ -12,7 +12,8 @@
   "editorconfig-cli": [
     "*.json",
     "*.js",
-    "src/*.html",
+    "src/html/**/*.html",
+    "src/pug/**/*.pug",
     "src/js/**/*.js",
     "src/img/**/*.svg",
     "src/sass/**/*.{sass,scss}"
@@ -29,18 +30,18 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "6.1.0",
+    "eslint": "7.0.0",
     "eslint-config-htmlacademy": "0.5.2",
     "editorconfig": "^0.15.3",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.4.1",
     "stylelint-config-htmlacademy": "^0.1.4",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
@@ -55,7 +56,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
-    "webpack": "^4.42.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "^3.11.0"
   },

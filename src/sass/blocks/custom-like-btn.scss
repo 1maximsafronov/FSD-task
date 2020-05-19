@@ -5,6 +5,7 @@
     position: relative;
 
     display: flex;
+    align-items: center;
 
     box-sizing: border-box;
     min-width: 40px;
@@ -21,8 +22,6 @@
 
     font-size: 12px;
     line-height: 18px;
-
-    align-items: center;
 
     &::before {
       display: block;

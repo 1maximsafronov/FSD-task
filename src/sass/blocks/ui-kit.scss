@@ -1,20 +1,17 @@
 .ui-kit__colors-and-text {
   display: flex;
+  justify-content: space-between;
 
   padding-top: 145px;
   padding-bottom: 145px;
-
-  justify-content: space-between;
 }
-
 
 .ui-kit__form-elements {
   display: flex;
+  justify-content: space-between;
 
   padding-top: 145px;
   padding-bottom: 145px;
-
-  justify-content: space-between;
 }
 
 .ui-kit__column {
@@ -29,7 +26,6 @@
 
   .container {
     display: flex;
-
     justify-content: space-between;
   }
 }

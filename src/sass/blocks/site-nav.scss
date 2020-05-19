@@ -1,27 +1,36 @@
 .site-nav {
   display: flex;
-  list-style: none;
-  padding: 0;
   align-items: center;
+
+  padding: 0;
+
+  list-style: none;
 }
 
 .site-nav__item {
   margin-right: 30px;
-  line-height: 17px;
+
   color: $color-dark-shade-50;
 
+  line-height: 17px;
+
   &--sub-nav {
-    padding-right: 24px;
     position: relative;
 
+    padding-right: 24px;
+
     &::after {
-      display: block;
       position: absolute;
-      content: "";
+      top: 0;
+      right: 0;
+
+      display: block;
+
       width: 21px;
       height: 17px;
-      right: 0;
-      top: 0;
+
+      content: "";
+
       background-image: url("/img/icon-tick.svg");
       background-repeat: no-repeat;
       background-position: 50%;
@@ -30,12 +39,14 @@
 }
 
 .site-nav__link {
-  color: $color-dark-shade-50;
   text-decoration: none;
 
+  color: $color-dark-shade-50;
+
   &--active {
-    font-weight: bold;
     color: $color-dark-shade-75;
+
+    font-weight: bold;
   }
 }
 

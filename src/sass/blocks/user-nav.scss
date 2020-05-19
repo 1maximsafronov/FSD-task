@@ -3,25 +3,31 @@
   align-items: center;
 
   &--logined {
-    padding-left: 30px;
     position: relative;
 
+    padding-left: 30px;
+
     &::before {
-      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+
       width: 1px;
       height: 30px;
-      background-color: $color-dark-shade-10;
-      position: absolute;
-      left: 0;
-      top: 50%;
+
+      content: "";
       transform: translateY(-50%);
+
+      background-color: $color-dark-shade-10;
     }
   }
 }
 
 .user-nav__btn {
   display: block;
+
   margin-right: 20px;
+
   line-height: 34px;
 
   &:last-of-type {
@@ -31,6 +37,8 @@
 
 .user-nav__username {
   text-decoration: none;
+
   color: $color-dark-shade-50;
+
   line-height: 17px;
 }

@@ -11,11 +11,10 @@
 
 .calendar__header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   margin-bottom: 30px;
-
-  justify-content: space-between;
-  align-items: center;
 }
 
 .calendar__title {
@@ -53,22 +52,20 @@
 
   tr {
     display: flex;
-
     justify-content: space-between;
   }
 
   th,
   td {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 40px;
     height: 40px;
 
     font-size: 12px;
-    line-height: 15;
-
-    align-items: center;
-    justify-content: center;
+    line-height: 15px;
   }
 
   td {
@@ -157,7 +154,6 @@
 
 .calendar__footer {
   display: flex;
-
   justify-content: space-between;
 }
 

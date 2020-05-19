@@ -19,18 +19,16 @@
   padding: 20px;
 }
 
-
 .hotel-card__info {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   margin-bottom: 8px;
   padding-bottom: 10px;
 
   border-bottom: 1px solid $color-dark-shade-10;
-
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .hotel-card__number {
@@ -70,10 +68,9 @@
 
 .hotel-card__rate {
   display: flex;
-
-  justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .hotel-card__rate-btn {

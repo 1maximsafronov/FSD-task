@@ -1,6 +1,5 @@
 .catalog {
   display: flex;
-
   justify-content: space-between;
 }
 
@@ -19,15 +18,14 @@
 
 .catalog__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
 
   list-style: none;
-
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .catalog__item {
@@ -36,6 +34,5 @@
 
 .catalog__pagination {
   display: flex;
-
   justify-content: center;
 }

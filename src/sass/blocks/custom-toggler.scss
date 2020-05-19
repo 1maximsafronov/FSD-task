@@ -3,15 +3,15 @@
     position: relative;
 
     display: flex;
+    align-items: center;
 
     cursor: pointer;
 
     color: $color-dark-shade-75;
 
-    align-items: center;
-
     &::before {
       display: block;
+      flex-shrink: 0;
 
       width: 40px;
       height: 20px;
@@ -21,8 +21,6 @@
 
       border: 1px solid $color-dark-shade-25;
       border-radius: 10px;
-
-      flex-shrink: 0;
     }
 
     &::after {
