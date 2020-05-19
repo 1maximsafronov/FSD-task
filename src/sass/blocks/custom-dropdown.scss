@@ -1,82 +1,83 @@
 .custom-dropdown {
+  padding: 0;
+}
+
+.custom-dropdown__label {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-bottom: 5px;
+
+  text-transform: uppercase;
+
+  color: $color-dark-shade-100;
+
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 15px;
+
+  span {
+    text-align: right;
+
+    color: $color-dark-shade-50;
+
+    font-weight: normal;
+  }
+}
+
+.custom-dropdown__toggle {
   position: relative;
 
+  display: block;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin: 0;
   padding: 0;
+  padding-right: 44px;
+  padding-left: 15px;
 
-  label {
-    position: relative;
+  cursor: pointer;
+  text-align-last: left;
 
-    display: flex;
-    justify-content: space-between;
+  color: $color-dark-shade-75;
+  border: 1px solid $color-dark-shade-25;
+  border-radius: 4px;
+  outline: none;
+  background-color: $color-white;
 
-    margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 42px;
 
-    text-transform: uppercase;
-
-    color: $color-dark-shade-100;
-
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 15px;
-
-    span {
-      text-align: right;
-
-      color: $color-dark-shade-50;
-
-      font-weight: normal;
-    }
-
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: -49px;
-
-      display: block;
-
-      width: 44px;
-      height: 44px;
-
-      content: "";
-      cursor: pointer;
-
-      border: none;
-      background: none;
-      background-image: url("/img/icon-tick.svg");
-      background-repeat: no-repeat;
-      background-position: 50%;
-    }
+  &::placeholder {
+    color: $color-dark-shade-25;
   }
 
-  input {
+  &:hover,
+  &:focus {
+    border-color: $color-dark-shade-50;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+
     display: block;
 
-    box-sizing: border-box;
-    width: 100%;
-    height: 44px;
-    margin: 0;
-    padding: 0;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 44px;
+    height: 100%;
 
+    content: "";
     cursor: pointer;
 
-    color: $color-dark-shade-75;
-    border: 1px solid $color-dark-shade-25;
-    border-radius: 4px;
-    outline: none;
-
-    font-size: 14px;
-    line-height: 42px;
-
-    &::placeholder {
-      color: $color-dark-shade-25;
-    }
-
-    &:hover,
-    &:focus {
-      border-color: $color-dark-shade-50;
-    }
+    border: none;
+    background: none;
+    background-image: url("/img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
   }
 }

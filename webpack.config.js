@@ -10,10 +10,10 @@ const PATHS = {
   build: path.join(__dirname, `./build`),
 };
 
-const PAGES_DIR = PATHS.src + `/pug/`;
+const PAGES_DIR = PATHS.src + `/html/`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
-  .filter((fileName) => fileName.endsWith(`.pug`));
+  .filter((fileName) => fileName.endsWith(`.html`));
 
 module.exports = {
   entry: {
@@ -142,7 +142,7 @@ module.exports = {
       (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, `.html`)}`,
+          filename: `./${page.replace(/\.html/, `.html`)}`,
         })
     ),
   ],
