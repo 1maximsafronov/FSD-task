@@ -4,30 +4,22 @@ mixin login-form
     h2.login-form__title.custom-title-h1 Войти
 
     // Поле Email пользователя
-    +custom-text-field({
-      className: "login-form__text-field",
-      label: "Email пользователя",
-      isLabelShown: 0,
-      id: "user-email",
-      type: "email",
-      name: "user-email",
-      value: "",
-      placeholder: "Email"
-    })
+    .login-form__text-field
+      .custom-text-field
+          label.custom-text-field__label.visually-hidden(for="user-email")
+            | Email пользователя
+          input.custom-text-field__input(id="user-email" type="email" name="user-email" value="" placeholder="Email")
 
     // Поле Пароль пользователя
-    +custom-text-field({
-      className: "login-form__text-field",
-      label: "Пароль пользователя",
-      isLabelShown: 0,
-      id: "user-password",
-      type: "password",
-      name: "user-password",
-      value: "",
-      placeholder: "Пароль"
-    })
+    .login-form__text-field
+      .custom-text-field
+          label.custom-text-field__label.visually-hidden(for="user-password")
+            | Пароль пользователя
+          input.custom-text-field__input(id="user-password" type="password" name="user-password" value="" placeholder="Пароль")
 
-    button.login-form__btn.btn.btn--arrow(type='submit') войти
+    // Кнопка отправки формы "Войти"
+    .login-form__btn
+      button.btn.btn--arrow(type='submit') войти
 
     p.login-form__is-logined
       | Нет аккаунта на Toxin?

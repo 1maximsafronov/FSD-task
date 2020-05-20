@@ -1,4 +1,4 @@
-extends common/layout
+extends ../common/layout
 
 block variables
   - var pageTitle = "Вход"
@@ -8,4 +8,5 @@ block content
     h1.visually-hidden Страница входа в аккаунт
 
     // Форма Логина
-    +login-form(class="main-content__login-form")
+    .main-content__login-form
+      +login-form

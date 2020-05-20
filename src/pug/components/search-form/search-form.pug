@@ -1,24 +1,38 @@
 include ../calendar/calendar
+include ../custom-dropdown/custom-dropdown
 
 mixin search-form
   form.search-form(action='#', method='post', class= attributes.class)
     h2.search-form__title.custom-title-h1 Найдём номера под ваши пожелания
-    .search-form__date.date-dropdown
 
-      +calendar(class="date-dropdown__popup")
+    // Выбор дадты заезда/выезда с выпадающим календарём
+    .search-form__date
+      .date-dropdown
+        +calendar(class="date-dropdown__popup")
+        .date-dropdown__item
+          .custom-dropdown
+            h3.custom-dropdown__label
+              | прибытие
+            button.custom-dropdown__toggle(type="button" name="arrival-date")
+              | ДД.ММ.ГГГГ
+            .custom-dropdown__menu
+        .date-dropdown__item
+          .custom-dropdown
+            h3.custom-dropdown__label
+              | выезд
+            button.custom-dropdown__toggle(type="button" name="departure-date")
+              | ДД.ММ.ГГГГ
+            .custom-dropdown__menu
 
-      p.date-dropdown__item.custom-dropdown
-        label(for='arrival-date')
-          | прибытие
-        input#arrival-date(type='text', name='arrival-date', value='ДД.ММ.ГГГГ', placeholder='', readonly='')
-      p.date-dropdown__item.custom-dropdown
-        label(for='departure-date')
-          | выезд
-        input#departure-date(type='text', name='departure-date', value='ДД.ММ.ГГГГ', placeholder='', readonly='')
+    // Выподающее меню по количеству гостей
+    .search-form__guests
+      .custom-dropdown
+        h3.custom-dropdown__label
+          | гости
+        button.custom-dropdown__toggle(type="button" name="guests-number")
+          | Сколько гостей
+        .custom-dropdown__menu
 
-    p.search-form__guests.custom-dropdown
-      label(for='guests-number')
-        | гости
-      input#guests-number(type='text', name='guests-number', value='Сколько гостей', placeholder='', readonly='')
-
-    button.search-form__btn.btn.btn--arrow(type='submit') подобрать номер
+    // Кнопка отправки формы "Подобрать номер"
+    .search-form__btn
+      button.btn.btn--arrow(type='submit') подобрать номер

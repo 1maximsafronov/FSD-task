@@ -1,4 +1,4 @@
-.custom-radiobtn {
+.custom-radio {
   position: relative;
 
   display: block;
@@ -11,7 +11,7 @@
 }
 
 
-.custom-radiobtn__indicator {
+.custom-radio__indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@
 }
 
 
-.custom-radiobtn__input:checked + .custom-radiobtn__indicator {
+.custom-radio__input:checked + .custom-radio__indicator {
   color: $color-dark-shade-75;
   border-color: $color-purpule;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);

@@ -1,0 +1,24 @@
+mixin custom-dropdown(options)
+
+  - var label = options.label;
+  - var labelClass = options.isLabelShown ? `` : `visually-hidden`;
+  - var subLabel = options.subLabel ? options.subLabel : ``;
+  - var className = options.className;
+  - var name = options.name;
+  - var value = options.value;
+
+  .custom-dropdown(class= className)
+    h3.custom-dropdown__label(class= labelClass)
+      | #{label}
+      span #{subLabel}
+    button.custom-dropdown__toggle(type='button' name= name)
+      | #{value}
+    .custom-dropdown__menu
+
+    //-
+      .custom-dropdown
+        h3.custom-dropdown__label
+          | гости
+        button.custom-dropdown__toggle(type="" name="")
+          | Сколько гостей
+        .custom-dropdown__menu

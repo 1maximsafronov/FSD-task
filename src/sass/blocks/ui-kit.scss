@@ -6,10 +6,19 @@
   padding-bottom: 145px;
 }
 
-.ui-kit__form-elements {
+.ui-kit__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ui-kit__form-elements {
   padding-top: 145px;
   padding-bottom: 145px;
 }

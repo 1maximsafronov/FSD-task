@@ -5,79 +5,67 @@ mixin reg-form
   form.reg-form(action='#', method='post', class= attributes.class)
 
     h2.reg-form__title.custom-title-h1 Регистрация аккаунта
+
     // Поле Имя пользователя
-    +custom-text-field({
-      className: "reg-form__text-field",
-      label: "Имя пользователя",
-      isLabelShown: 0,
-      id: "user-name",
-      type: "text",
-      name: "user-name",
-      value: "",
-      placeholder: "Имя"
-    })
+    .reg-form__text-field
+      .custom-text-field
+        label.custom-text-field__label.visually-hidden(for="user-name")
+          | Имя пользователя
+        input.custom-text-field__input(id="user-name" type="text" name="user-name" value="" placeholder="Имя")
+
     // Поле Фамилия пользователя
-    +custom-text-field({
-      className: "reg-form__text-field",
-      label: "Фамилия пользователя",
-      isLabelShown: 0,
-      id: "user-surname",
-      type: "text",
-      name: "user-surname",
-      value: "",
-      placeholder: "Фамилия"
-    })
+    .reg-form__text-field
+      .custom-text-field
+        label.custom-text-field__label.visually-hidden(for="user-surname")
+          | Фамилия пользователя
+        input.custom-text-field__input(id="user-surname" type="text" name="user-surname" value="" placeholder="Фамилия")
 
     .reg-form__gender
-      p.reg-form__radiobtn.custom-radiobtn
-        input#reg-form-male.visually-hidden(type='radio', name='reg-form-gender', value='reg-form-male', checked='')
-        label(for='reg-form-male') Мужчина
-      p.reg-form__radiobtn.custom-radiobtn
-        input#reg-form-female.visually-hidden(type='radio', name='reg-form-gender', value='reg-form-female')
-        label(for='reg-form-female') Женщина
+      .reg-form__radiobtn
+        label.custom-radio(for='male')
+          | Мужчина
+          input.custom-radio__input.visually-hidden(type='radio', id="male" name='gender', value='male', checked)
+          span.custom-radio__indicator
+      .reg-form__radiobtn
+        label.custom-radio(for='female')
+          | Женщина
+          input.custom-radio__input.visually-hidden(type='radio', id="female" name='gender', value='female')
+          span.custom-radio__indicator
 
     // Поле дата рождения
-    +custom-text-field({
-      className: "reg-form__text-field reg-form__birthdate",
-      label: "Дата рождения",
-      isLabelShown: 1,
-      id: "user-birthdate",
-      type: "text",
-      name: "user-birthdate",
-      value: "",
-      placeholder: "ДД.ММ.ГГГГ"
-    })
+    .reg-form__text-field.reg-form__birthdate
+      .custom-text-field
+        label.custom-text-field__label(for="user-birthdate")
+          | Дата рождения
+        input.custom-text-field__input(id="user-birthdate" type="text" name="user-birthdate" value="" placeholder="ДД.ММ.ГГГГ")
 
     .reg-form__login-data
       h3.reg-form__label.custom-title-h3 данные для входа в сервис
+
       // Поле Email пользователя
-      +custom-text-field({
-        className: "reg-form__text-field",
-        label: "Email пользователя",
-        isLabelShown: 0,
-        id: "user-email",
-        type: "email",
-        name: "user-email",
-        value: "",
-        placeholder: "Email"
-      })
+      .reg-form__text-field
+        .custom-text-field
+          label.custom-text-field__label.visually-hidden(for="user-email")
+            | Email пользователя
+          input.custom-text-field__input(id="user-email" type="email" name="user-email" value="" placeholder="Email")
+
       // Поле Пароль пользователя
-      +custom-text-field({
-        className: "reg-form__text-field",
-        label: "Пароль пользователя",
-        isLabelShown: 0,
-        id: "user-password",
-        type: "password",
-        name: "user-password",
-        value: "",
-        placeholder: "Пароль"
-      })
+      .reg-form__text-field
+        .custom-text-field
+          label.custom-text-field__label.visually-hidden(for="user-password")
+            | Пароль пользователя
+          input.custom-text-field__input(id="user-password" type="password" name="user-password" value="" placeholder="Пароль")
 
-      p.reg-form__toggler.custom-toggler
-        input#reg-form-subsribe-toggler.visually-hidden(type='checkbox', name='reg-form-subsribe-toggler', value='')
-        label(for='reg-form-subsribe-toggler') Получать спецпредложения
+      // Переключатель подписки на рассылку
+      .reg-form__toggler
+        label.custom-toggler(for='reg-form-subsribe-toggler')
+          | Получать спецпредложения
+          input.custom-toggler__input.visually-hidden(id="reg-form-subsribe-toggler" type='checkbox', name='reg-form-subsribe-toggler', value='')
+          span.custom-toggler__indicator
 
-    button.reg-form__btn.btn.btn--arrow(type='submit') перейти к оплате
+    // Кнопка отправки формы "Перейти к оплате"
+    .reg-form__btn
+        button.btn.btn--arrow(type='submit') перейти к оплате
 
     p.reg-form__is-logined
       | Уже есть аккаунт на Toxin

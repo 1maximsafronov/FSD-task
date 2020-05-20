@@ -4,11 +4,11 @@
   &--subscribe {
     position: relative;
 
-    input {
+    .custom-text-field__input {
       padding-right: 44px;
     }
 
-    button {
+    .custom-text-field__button {
       position: absolute;
       right: 0;
       bottom: 0;
@@ -26,6 +26,31 @@
       background-repeat: no-repeat;
       background-position: 50%;
     }
+  }
+}
+
+.custom-text-field__label {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-bottom: 5px;
+
+  text-transform: uppercase;
+
+  color: $color-dark-shade-100;
+
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 15px;
+
+  span {
+    text-align: right;
+
+    color: $color-dark-shade-50;
+
+    font-weight: normal;
   }
 }
 
@@ -58,26 +83,3 @@
   }
 }
 
-.custom-text-field__label {
-  display: flex;
-  justify-content: space-between;
-
-  margin-bottom: 5px;
-
-  text-transform: uppercase;
-
-  color: $color-dark-shade-100;
-
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 15px;
-
-  span {
-    text-align: right;
-
-    color: $color-dark-shade-50;
-
-    font-weight: normal;
-  }
-}

@@ -1,8 +1,8 @@
-extends common/layout
+extends ../common/layout
 
-include components/pagination/pagination
-include components/hotel-card/hotel-card
-include components/filter-form/filter-form
+include ../components/pagination/pagination
+include ../components/hotel-card/hotel-card
+include ../components/filter-form/filter-form
 
 block variables
   - var pageTitle = "Каталог";
@@ -27,7 +27,8 @@ block content
   main.main-content
     .main-content__catalog.container.catalog
       // Форма фильтрации отелей
-      +filter-form(class="catalog__filter")
+      .catalog__filter
+        +filter-form
 
       section.catalog__content
         h1.catalog__title.custom-title-h1 Номера, которые мы для вас подобрали

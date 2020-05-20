@@ -1,0 +1,48 @@
+.rich-checkbox {
+  position: relative;
+
+  display: block;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+
+  color: $color-dark-shade-75;
+
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.rich-checkbox__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid $color-dark-shade-25;
+  border-radius: 4px;
+}
+
+.rich-checkbox__input:checked + .rich-checkbox__indicator {
+  border-color: $color-purpule;
+  background-image: url("/img/icon-checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 3px;
+}
+
+.rich-checkbox__desc {
+  display: block;
+
+  margin-top: 5px;
+
+  color: $color-dark-shade-50;
+
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+}

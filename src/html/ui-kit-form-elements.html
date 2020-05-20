@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>UI kit</title>
+</head>
+
+<body class="ui-kit">
+  <!-- Набор элементов форм -->
+  <section class="ui-kit__form-elements container">
+    <div class="ui-kit__wrapper">
+      <div class="ui-kit__column">
+        <!-- Кастомное поле ввода -->
+        <p class="custom-text-field">
+          <label class="custom-text-field__label" for="">
+            Text Field <span>Default</span>
+          </label>
+          <input class="custom-text-field__input" type="text" name="" id="" value="" placeholder="Email" />
+        </p>
+
+        <p class="custom-text-field">
+          <label class="custom-text-field__label" for="">Text Field <span>Hover / Focus</span></label>
+          <input class="custom-text-field__input" type="text" name="" id="" value="This is pretty awesome"
+            placeholder="" />
+        </p>
+
+        <div class="custom-dropdown">
+          <h3 class="custom-dropdown__label">Dropdown<span>Default</span></h3>
+          <button class="custom-dropdown__toggle" type="button">
+            Сколько гостей
+          </button>
+          <div class="custom-dropdown__menu"></div>
+        </div>
+
+        <p class="custom-text-field">
+          <label class="custom-text-field__label" for="">masked text field
+            <span>Default</span></label>
+          <input class="custom-text-field__input" type="text" name="" id="" value="" placeholder="ДД.ММ.ГГГГ" />
+        </p>
+
+        <div class="date-dropdown">
+          <div class="date-dropdown__item custom-dropdown">
+            <h3 class="custom-dropdown__label">date Dropdown</h3>
+            <button class="custom-dropdown__toggle" type="button">
+              ДД.ММ.ГГГГ
+            </button>
+          </div>
+
+          <div class="date-dropdown__item custom-dropdown">
+            <h3 class="custom-dropdown__label">date Dropdown</h3>
+            <button class="custom-dropdown__toggle" type="button">
+              19.08.2019
+            </button>
+          </div>
+        </div>
+
+        <div class="custom-dropdown">
+          <h3 class="custom-dropdown__label">filter date dropdown</h3>
+          <button class="custom-dropdown__toggle" type="button">
+            19 авг - 23 авг
+          </button>
+          <div class="custom-dropdown__menu"></div>
+        </div>
+
+        <p class="custom-text-field custom-text-field--subscribe">
+          <label class="custom-text-field__label" for="">
+            subscription text field
+          </label>
+          <input class="custom-text-field__input" type="email" name="" id="" value="" placeholder="Email" />
+          <button class="custom-text-field__button">
+            <span class="visually-hidden">Подписаться</span>
+          </button>
+        </p>
+
+      </div>
+
+      <div class="ui-kit__column">
+        <!-- Кастомные чекбоксы -->
+        <h3 class="custom-title-h3">Checkbox Buttons</h3>
+        <p>
+          <label class="custom-checkbox" for="smoking">Можно курить
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+              value="smoking" />
+            <span class="custom-checkbox__indicator"></span>
+          </label>
+        </p>
+
+        <p>
+          <label class="custom-checkbox" for="pets">Можно с питомцами
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="pets" id="pets" value="pets"
+              checked />
+            <span class="custom-checkbox__indicator"></span>
+          </label>
+        </p>
+        <p>
+          <label class="custom-checkbox" for="guests">Можно пригласить гостей (до 10 человек)
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="guests" id="guests"
+              value="guests" checked />
+            <span class="custom-checkbox__indicator"></span>
+          </label>
+        </p>
+
+        <!-- Кастомные радиобаттоны -->
+        <h3 class="custom-title-h3">Radio Buttons</h3>
+
+        <p>
+          <label class="custom-radio" for="male">Мужчина
+            <input class="custom-radio__input visually-hidden" type="radio" name="gender" id="male" value="male"
+              checked />
+            <span class="custom-radio__indicator"></span>
+          </label>
+        </p>
+
+        <p>
+          <label class="custom-radio" for="female">Женщина
+            <input class="custom-radio__input visually-hidden" type="radio" name="gender" id="female" value="female" />
+            <span class="custom-radio__indicator"></span>
+          </label>
+        </p>
+
+        <!-- Кастомные переключатели -->
+        <h3 class="custom-title-h3">Toggle</h3>
+
+        <p>
+          <label class="custom-toggler" for="subsribe-torrler-1">Получать спецпредложения
+            <input class="custom-toggler__input visually-hidden" type="checkbox" name="subsribe-torrler-1"
+              id="subsribe-torrler-1" value="" checked />
+            <span class="custom-toggler__indicator"></span>
+          </label>
+        </p>
+
+        <p>
+          <label class="custom-toggler" for="subsribe-torrler-2">Получать спецпредложения
+            <input class="custom-toggler__input visually-hidden" type="checkbox" name="subsribe-torrler-2"
+              id="subsribe-torrler-2" value="" />
+            <span class="custom-toggler__indicator"></span>
+          </label>
+        </p>
+
+        <!-- Кастомные лайки -->
+        <h3 class="custom-title-h3">like button</h3>
+
+        <p class="custom-like-btn">
+          <input class="visually-hidden" type="checkbox" name="like-button-1" id="like-button-1" value="" />
+          <label for="like-button-1">2</label>
+        </p>
+
+        <p class="custom-like-btn">
+          <input class="visually-hidden" type="checkbox" name="like-button-2" id="like-button-2" value="" checked />
+          <label for="like-button-2">12</label>
+        </p>
+
+        <!-- Кастомные кнопки рейтинга -->
+        <h3 class="custom-title-h3">rate button</h3>
+
+        <ul class="custom-rate-btn">
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item"></li>
+        </ul>
+
+        <ul class="custom-rate-btn">
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+          <li class="custom-rate-btn__item custom-rate-btn__item--active"></li>
+        </ul>
+      </div>
+
+      <div class="ui-kit__column">
+        <!-- Кастомные кнопки -->
+        <h3 class="custom-title-h3">buttons</h3>
+
+        <button class="btn" type="button">CLICK ME</button>
+        <button class="btn btn--hover" type="button">CLICK ME</button>
+
+        <button class="btn btn--border" type="button">CLICK ME</button>
+        <button class="btn btn--border btn--hover" type="button">
+          CLICK ME
+        </button>
+
+        <a href="#" class="btn btn--link">CLICK ME</a>
+        <a href="#" class="btn btn--link">CLICK ME</a>
+
+        <button class="btn btn--arrow" type="button">перейти к оплате</button>
+
+        <!-- Кастомный переключатель страниц -->
+        <h3 class="custom-title-h3">pagination</h3>
+
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a href="#" class="pagination__link pagination__link--current">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">...</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">15</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link pagination__link--next">
+                <span class="visually-hidden">Следующая страница</span>
+              </a>
+            </li>
+          </ul>
+          <p class="pagination__label">1 – 12 из 100+ вариантов аренды</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="ui-kit__wrapper">
+
+      <div class="ui-kit__column">
+        <div class="custom-dropdown">
+          <h3 class="custom-dropdown__label">dropdown<span>Default</span></h3>
+          <button class="custom-dropdown__toggle" type="button">
+            2 спальни, 2 кровати...
+          </button>
+          <div class="custom-dropdown__menu">
+            <ul>
+              <li>спальни</li>
+              <li>кровати</li>
+              <li>ванные комнаты</li>
+            </ul>
+          </div>
+        </div>
+        <div class="custom-dropdown">
+          <h3 class="custom-dropdown__label">dropdown<span>Default</span></h3>
+          <button class="custom-dropdown__toggle custom-dropdown__toggle--active" type="button">
+            2 спальни, 2 кровати...
+          </button>
+          <div class="custom-dropdown__menu">
+            <ul>
+              <li>спальни</li>
+              <li>кровати</li>
+              <li>ванные комнаты</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="ui-kit__column">
+        <div class="custom-dropdown">
+          <h3 class="custom-dropdown__label">dropdown</h3>
+          <button class="custom-dropdown__toggle custom-dropdown__toggle--active" type="button">
+            Сколько гостей
+          </button>
+          <div class="custom-dropdown__menu">
+            <ul>
+              <li>взрослые</li>
+              <li>дети</li>
+              <li>младенцы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-kit__column">
+        <div class="custom-dropdown">
+          <h3 class="custom-dropdown__label">dropdown</h3>
+          <button class="custom-dropdown__toggle custom-dropdown__toggle--active" type="button">
+            3 гостя
+          </button>
+          <div class="custom-dropdown__menu">
+            <ul>
+              <li>взрослые</li>
+              <li>дети</li>
+              <li>младенцы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-kit__wrapper">
+
+      <div class="ui-kit__column">
+        <div class="expandable-checkbox-list">
+          <button class="expandable-checkbox-list__toggle">expandable checkbox
+            list</button>
+          <ul class="expandable-checkbox-list__menu">
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Завтрак
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Письменный стол
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" checked />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Стул для кормления
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" checked />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Кроватка
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" checked />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Телевизор
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Шампунь
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="expandable-checkbox-list">
+          <button class="expandable-checkbox-list__toggle expandable-checkbox-list__toggle--active">expandable checkbox
+            list</button>
+          <ul class="expandable-checkbox-list__menu">
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Завтрак
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Письменный стол
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" checked />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Стул для кормления
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" checked />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Кроватка
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" checked />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Телевизор
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+            <li class="expandable-checkbox-list__item">
+              <label class="custom-checkbox" for="smoking">Шампунь
+                <input class="custom-checkbox__input visually-hidden" type="checkbox" name="smoking" id="smoking"
+                  value="smoking" />
+                <span class="custom-checkbox__indicator"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ui-kit__column">
+        <h3 class="custom-title-h3">rich Checkbox Buttons</h3>
+        <p>
+          <label class="rich-checkbox" for="rich-checkbox-1">Широкий коридор
+            <input class="rich-checkbox__input visually-hidden" type="checkbox" name="rich-checkbox-1"
+              id="rich-checkbox-1" value="rich-checkbox-1" />
+            <span class="rich-checkbox__indicator"></span>
+            <small class="rich-checkbox__desc">Ширина коридоров в номере не менее 91 см.</small>
+          </label>
+        </p>
+
+        <p>
+          <label class="rich-checkbox" for="rich-checkbox-2">Помощник для инвалидов
+            <input class="rich-checkbox__input visually-hidden" type="checkbox" name="rich-checkbox-2"
+              id="rich-checkbox-2" value="rich-checkbox-2" />
+            <span class="rich-checkbox__indicator"></span>
+            <small class="rich-checkbox__desc">На 1 этаже вас встретит специалист и проводит до номера.</small>
+          </label>
+        </p>
+      </div>
+
+      <div class="ui-kit__column">
+        <h3 class="custom-title-h3">bullet list</h3>
+
+        <ul class="bullet-list">
+          <li class="bullet-list__item">Нельзя с питомцами</li>
+          <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+          <li class="bullet-list__item">Время прибытия — после 13:00,
+            а выезд до 12:00</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-extends common/layout
+extends ../common/layout
 
 block variables
   - var pageTitle = "Регистрация"
@@ -8,4 +8,5 @@ block content
     h1.visually-hidden Страница регистранции аккаунта
 
     // Форма регистрации
-    +reg-form(class="main-content__reg-form")
+    .main-content__reg-form
+      +reg-form

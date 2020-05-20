@@ -1,4 +1,4 @@
-extends common/layout
+extends ../common/layout
 
 block variables
   - var pageTitle = "Найдём номера под ваши пожелания"
@@ -9,7 +9,8 @@ block content
     .main-content__wrapper.container
 
       // Форма Поиска
-      +search-form(class="main-content__search-form")
+      .main-content__search-form
+        +search-form
 
     .main-content__promo
       .container

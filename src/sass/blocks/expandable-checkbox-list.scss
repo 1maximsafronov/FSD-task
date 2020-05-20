@@ -1,0 +1,72 @@
+.expandable-checkbox-list {
+  padding: 0;
+}
+
+.expandable-checkbox-list__toggle {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 44px;
+
+  text-align-last: left;
+  /* identical to box height */
+  text-transform: uppercase;
+
+  border: none;
+  background: none;
+
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 44px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 44px;
+    height: 100%;
+
+    content: "";
+    cursor: pointer;
+
+    border: none;
+    background: none;
+    background-image: url("/img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--active {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.expandable-checkbox-list__menu {
+  display: none;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.expandable-checkbox-list__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.expandable-checkbox-list__toggle--active + .expandable-checkbox-list__menu {
+  display: block;
+}

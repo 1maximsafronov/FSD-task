@@ -21,8 +21,10 @@
   font-weight: bold;
   line-height: 44px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
+    outline: none;
   }
 
   &--border {
