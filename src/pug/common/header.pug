@@ -2,16 +2,15 @@ include ../components/logo/logo
 include ../components/site-nav/site-nav
 
 header.main-header
-  nav.main-nav.container
-
-    // Логотип
-    .main-nav__logo
-      +logo
-
-    // Навигация по сайту
-    +site-nav(class="main-nav__site-nav")
-
-    // Пользовательская навигация
-    .main-nav__user-nav.user-nav
-      a.user-nav__btn.btn.btn--border(href='login.html') войти
-      a.user-nav__btn.btn(href='registration.html') зарегистрироваться
+  .container
+    nav.main-nav
+      // Логотип
+      .main-nav__logo
+        +logo
+      // Навигация по сайту
+      +site-nav(class="main-nav__site-nav")
+      // Пользовательская навигация
+      .main-nav__user-nav
+        .user-nav
+          a.user-nav__btn.btn.btn--border(href='login.html') войти
+          a.user-nav__btn.btn(href='registration.html') зарегистрироваться

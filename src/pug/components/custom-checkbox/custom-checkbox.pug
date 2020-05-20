@@ -1,0 +1,27 @@
+mixin custom-checkbox(options)
+  - var label = options.label;
+  - var id = options.id;
+  - var name = options.name;
+  - var value = options.value;
+  - var checked = options.checked
+
+  label.custom-checkbox(for= id, class= attributes.class)
+    input.custom-checkbox__input.visually-hidden(
+      type='checkbox',
+      id= id
+      name= name,
+      value= value,
+      checked= checked
+      )
+    span.custom-checkbox__indicator
+    | #{label}
+
+//- Пример использования
+
+  +custom-checkbox({
+    label: "Можно курить",
+    id: "smoking",
+    name: "smoking",
+    value: "smoking",
+    checked: false
+  })

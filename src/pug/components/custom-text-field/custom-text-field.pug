@@ -3,26 +3,24 @@ mixin custom-text-field(options)
   - var label = options.label;
   - var labelClass = options.isLabelShown ? `` : `visually-hidden`;
   - var subLabel = options.subLabel;
-  - var className = options.className;
-  - var id = options.id;
   - var type = options.type;
+  - var id = options.id;
   - var name = options.name;
   - var value = options.value;
   - var placeholder = options.placeholder;
 
-  .custom-text-field(class= className)
-
+  .custom-text-field(class= attributes.class)
     label.custom-text-field__label(class= labelClass, for= id)
       | #{label}
       span #{subLabel}
 
     input.custom-text-field__input(
-      id= id,
-      type= type,
-      name= name,
-      value= value,
+      id= id
+      type= type
+      name= name
+      value= value
       placeholder= placeholder
-      )
+    )
 
 //- Пример использования
 

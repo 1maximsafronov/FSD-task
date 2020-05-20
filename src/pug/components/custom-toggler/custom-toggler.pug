@@ -1,0 +1,27 @@
+mixin custom-toggler(options)
+
+  - var label = options.label;
+  - var id = options.id;
+  - var name = options.name;
+  - var value = options.value;
+  - var checked = options.checked;
+
+  label.custom-toggler(for= id)
+    | #{label}
+    input.custom-toggler__input.visually-hidden(
+      type='checkbox',
+      id= id
+      name= name
+      value= value
+      checked= checked
+      )
+    span.custom-toggler__indicator
+
+//-
+  +custom-toggler({
+    label: "Получать спецпредложения",
+    id: "reg-form-subsribe-toggler",
+    name: "reg-form-subsribe-toggler",
+    value: "",
+    checked: false
+  })

@@ -1,67 +1,102 @@
 include ../custom-text-field/custom-text-field
-
+include ../custom-radio/custom-radio
+include ../custom-toggler/custom-toggler
 
 mixin reg-form
   form.reg-form(action='#', method='post', class= attributes.class)
-
     h2.reg-form__title.custom-title-h1 Регистрация аккаунта
 
-    // Поле Имя пользователя
+    //- Поле Имя пользователя
     .reg-form__text-field
-      .custom-text-field
-        label.custom-text-field__label.visually-hidden(for="user-name")
-          | Имя пользователя
-        input.custom-text-field__input(id="user-name" type="text" name="user-name" value="" placeholder="Имя")
+      +custom-text-field({
+        label: "Имя пользователя",
+        isLabelShown: false,
+        type: "text",
+        id: "user-name",
+        name: "user-name",
+        value: "",
+        placeholder: "Имя"
+      })
 
-    // Поле Фамилия пользователя
+    //- Поле Фамилия пользователя
     .reg-form__text-field
-      .custom-text-field
-        label.custom-text-field__label.visually-hidden(for="user-surname")
-          | Фамилия пользователя
-        input.custom-text-field__input(id="user-surname" type="text" name="user-surname" value="" placeholder="Фамилия")
+      +custom-text-field({
+        label: "Фамилия пользователя",
+        isLabelShown: false,
+        type: "text",
+        id: "user-surname",
+        name: "user-surname",
+        value: "",
+        placeholder: "Фамилия"
+      })
 
+    //- Выбор пола
     .reg-form__gender
       .reg-form__radiobtn
-        label.custom-radio(for='male')
-          | Мужчина
-          input.custom-radio__input.visually-hidden(type='radio', id="male" name='gender', value='male', checked)
-          span.custom-radio__indicator
+        +custom-radio({
+          label: "Мужчина",
+          id: "male",
+          name: "gender",
+          value: "male",
+          checked: true
+        })
       .reg-form__radiobtn
-        label.custom-radio(for='female')
-          | Женщина
-          input.custom-radio__input.visually-hidden(type='radio', id="female" name='gender', value='female')
-          span.custom-radio__indicator
+        +custom-radio({
+          label: "Женщина",
+          id: "female",
+          name: "gender",
+          value: "female",
+          checked: false
+        })
 
-    // Поле дата рождения
+    //- Поле дата рождения
     .reg-form__text-field.reg-form__birthdate
-      .custom-text-field
-        label.custom-text-field__label(for="user-birthdate")
-          | Дата рождения
-        input.custom-text-field__input(id="user-birthdate" type="text" name="user-birthdate" value="" placeholder="ДД.ММ.ГГГГ")
+      +custom-text-field({
+        label: "Дата рождения",
+        isLabelShown: true,
+        type: "text",
+        id: "user-birthdate",
+        name: "user-birthdate",
+        value: "",
+        placeholder: "ДД.ММ.ГГГГ"
+      })
 
     .reg-form__login-data
       h3.reg-form__label.custom-title-h3 данные для входа в сервис
 
-      // Поле Email пользователя
+      //- Поле Email пользователя
       .reg-form__text-field
-        .custom-text-field
-          label.custom-text-field__label.visually-hidden(for="user-email")
-            | Email пользователя
-          input.custom-text-field__input(id="user-email" type="email" name="user-email" value="" placeholder="Email")
+        +custom-text-field({
+          label: "Email пользователя",
+          isLabelShown: false,
+          type: "email",
+          id: "user-email",
+          name: "user-email",
+          value: "",
+          placeholder: "Email"
+        })
 
-      // Поле Пароль пользователя
+      //- Поле Пароль пользователя
       .reg-form__text-field
-        .custom-text-field
-          label.custom-text-field__label.visually-hidden(for="user-password")
-            | Пароль пользователя
-          input.custom-text-field__input(id="user-password" type="password" name="user-password" value="" placeholder="Пароль")
+        +custom-text-field({
+          label: "Пароль пользователя",
+          isLabelShown: false,
+          type: "password",
+          id: "user-password",
+          name: "user-password",
+          value: "",
+          placeholder: "Пароль"
+        })
 
-      // Переключатель подписки на рассылку
+      //- Переключатель подписки на рассылку
       .reg-form__toggler
-        label.custom-toggler(for='reg-form-subsribe-toggler')
-          | Получать спецпредложения
-          input.custom-toggler__input.visually-hidden(id="reg-form-subsribe-toggler" type='checkbox', name='reg-form-subsribe-toggler', value='')
-          span.custom-toggler__indicator
+        +custom-toggler({
+          label: "Получать спецпредложения",
+          id: "reg-form-subsribe-toggler",
+          name: "reg-form-subsribe-toggler",
+          value: "",
+          checked: false
+        })
 
     // Кнопка отправки формы "Перейти к оплате"
     .reg-form__btn

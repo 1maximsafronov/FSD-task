@@ -1,0 +1,18 @@
+mixin footer-nav(options)
+
+   .footer-nav
+        h3.footer-nav__title.custom-title-h3 #{options.title}
+        ul.footer-nav__list
+          each item in options.items
+            li.footer-nav__item
+              a.footer-nav__link(href= item.href) #{item.text}
+
+//-
+  +footer-nav({
+          title: "Служба поддержки",
+          items: [
+            {text: "Соглашения", href: "#"},
+            {text: "Сообщества", href: "#"},
+            {text: "Связь с нами", href: "#"}
+          ]
+        })

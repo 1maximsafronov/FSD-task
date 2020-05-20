@@ -1,0 +1,18 @@
+mixin custom-radio(options)
+
+  - var label = options.label;
+  - var id = options.id;
+  - var name = options.name;
+  - var value = options.value;
+  - var checked = options.checked;
+
+  label.custom-radio(for= id)
+    | #{label}
+    input.custom-radio__input.visually-hidden(
+      type='radio'
+      id= id
+      name= name
+      value= value
+      checked= checked
+    )
+    span.custom-radio__indicator

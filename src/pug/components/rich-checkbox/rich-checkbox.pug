@@ -1,0 +1,31 @@
+mixin rich-checkbox(options)
+
+  - var label = options.label;
+  - var text = options.text;
+  - var id = options.id;
+  - var name = options.name;
+  - var value = options.value;
+  - var checked = options.checked;
+
+  label.rich-checkbox(for= id)
+        | #{label}
+        input.rich-checkbox__input.visually-hidden(
+          type='checkbox'
+          id= id
+          name= name
+          value= value
+          checked= checked
+        )
+        span.rich-checkbox__indicator
+        small.rich-checkbox__desc #{text}
+
+//- Пример использования
+
+  +rich-checkbox({
+    label: "Широкий коридор",
+    text: "Ширина коридоров в номере не менее 91 см.",
+    id: "wide-corridor",
+    name: "wide-corridor",
+    value: "wide-corridor",
+    checked: false
+  })

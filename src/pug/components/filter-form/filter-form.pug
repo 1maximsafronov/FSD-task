@@ -1,26 +1,134 @@
+include ../custom-checkbox/custom-checkbox
+include ../rich-checkbox/rich-checkbox
+
 mixin filter-form
-  form.filter-form(action='', class= attributes.class)
-
-    p.custom-dropdown
-      label(for='')
+  form.filter-form(action='#', class= attributes.class)
+    .custom-dropdown
+      h3.custom-dropdown__label
         | даты пребывания в отеле
-      input(type='text', name='', id='', value='19 авг - 23 авг', placeholder='', readonly='')
+      button.custom-dropdown__toggle(type="button" name="guests-number")
+        | 19 авг - 23 авг
+      .custom-dropdown__menu
 
-    p.custom-dropdown
-      label(for='')
+    .custom-dropdown
+      h3.custom-dropdown__label
         | гости
-      input(type='text', name='', id='', value='3 гостя, 1 младенец', placeholder='', readonly='')
+      button.custom-dropdown__toggle(type="button" name="guests-number")
+        | 3 гостя, 1 младенец
+      .custom-dropdown__menu
 
     h3.custom-title-h3 Checkbox Buttons
 
-    label.custom-checkbox(for='smoking') Можно курить
-      input#smoking.visually-hidden(type='checkbox', name='smoking', value='smoking')
-      span.custom-checkbox__indicator
+    p.filter-form__checkbox
+      +custom-checkbox({
+        label: "Можно курить",
+        id: "smoking",
+        name: "smoking",
+        value: "smoking",
+        checked: false
+      })
 
-    label.custom-checkbox(for='pets') Можно с питомцами
-      input#pets.visually-hidden(type='checkbox', name='pets', value='pets' checked)
-      span.custom-checkbox__indicator
+    p.filter-form__checkbox
+      +custom-checkbox({
+        label: "Можно с питомцами",
+        id: "pets",
+        name: "pets",
+        value: "pets",
+        checked: true
+      })
 
-    label.custom-checkbox(for='guests') Можно пригласить гостей (до 10 человек)
-      input#guests.visually-hidden(type='checkbox', name='guests', value='guests' checked)
-      span.custom-checkbox__indicator
+    p.filter-form__checkbox
+      +custom-checkbox({
+        label: "Можно пригласить гостей (до 10 человек)",
+        id: "guests",
+        name: "guests",
+        value: "guests",
+        checked: true
+      })
+
+    h3.custom-title-h3 доступность
+
+    p.filter-form__rich-checkbox
+      +rich-checkbox({
+        label: "Широкий коридор",
+        text: "Ширина коридоров в номере не менее 91 см.",
+        id: "wide-corridor",
+        name: "wide-corridor",
+        value: "wide-corridor",
+        checked: false
+      })
+
+    p.filter-form__rich-checkbox
+      +rich-checkbox({
+        label: "Помощник для инвалидов",
+        text: "На 1 этаже вас встретит специалист и проводит до номера.",
+        id: "assistant-of-disabled",
+        name: "assistant-of-disabled",
+        value: "assistant-of-disabled",
+        checked: false
+      })
+
+    .custom-dropdown
+      h3.custom-dropdown__label
+        | удобства номера
+      button.custom-dropdown__toggle(type="button" name="guests-number")
+        | 2 спальни, 2 кровати...
+      .custom-dropdown__menu
+
+    .expandable-checkbox-list
+      button.expandable-checkbox-list__toggle.expandable-checkbox-list__toggle--active
+        | дополнительные удобства
+      ul.expandable-checkbox-list__menu
+        li.expandable-checkbox-list__item
+          +custom-checkbox({
+            label: "Завтрак",
+            id: "breakfast",
+            name: "breakfast",
+            value: "breakfast",
+            checked: false
+          })
+
+        li.expandable-checkbox-list__item
+          +custom-checkbox({
+            label: "Письменный стол",
+            id: "writing-desk",
+            name: "writing-desk",
+            value: "writing-desk",
+            checked: true
+          })
+
+        li.expandable-checkbox-list__item
+          +custom-checkbox({
+            label: "Стул для кормления",
+            id: "highchair",
+            name: "highchair",
+            value: "highchair",
+            checked: true
+          })
+
+        li.expandable-checkbox-list__item
+          +custom-checkbox({
+            label: "Кроватка",
+            id: "cot",
+            name: "cot",
+            value: "cot",
+            checked: true
+          })
+
+        li.expandable-checkbox-list__item
+          +custom-checkbox({
+            label: "Телевизор",
+            id: "television",
+            name: "television",
+            value: "television",
+            checked: false
+          })
+
+        li.expandable-checkbox-list__item
+          +custom-checkbox({
+            label: "Шампунь",
+            id: "shampoo",
+            name: "shampoo",
+            value: "shampoo",
+            checked: false
+          })

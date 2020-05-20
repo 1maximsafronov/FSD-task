@@ -1,23 +1,35 @@
+include ../custom-text-field/custom-text-field
+
 mixin login-form
   form.login-form(action='#', method='post', class= attributes.class)
 
     h2.login-form__title.custom-title-h1 Войти
 
-    // Поле Email пользователя
+    //- Поле Email пользователя
     .login-form__text-field
-      .custom-text-field
-          label.custom-text-field__label.visually-hidden(for="user-email")
-            | Email пользователя
-          input.custom-text-field__input(id="user-email" type="email" name="user-email" value="" placeholder="Email")
+      +custom-text-field({
+        label: "Email пользователя",
+        isLabelShown: false,
+        id: "user-email",
+        type: "email",
+        name: "user-email",
+        value: "",
+        placeholder: "Email"
+      })
 
-    // Поле Пароль пользователя
+    //- Поле Пароль пользователя
     .login-form__text-field
-      .custom-text-field
-          label.custom-text-field__label.visually-hidden(for="user-password")
-            | Пароль пользователя
-          input.custom-text-field__input(id="user-password" type="password" name="user-password" value="" placeholder="Пароль")
+      +custom-text-field({
+        label: "Пароль пользователя",
+        isLabelShown: false,
+        id: "user-password",
+        type: "password",
+        name: "user-password",
+        value: "",
+        placeholder: "Пароль"
+      })
 
-    // Кнопка отправки формы "Войти"
+    //- Кнопка отправки формы "Войти"
     .login-form__btn
       button.btn.btn--arrow(type='submit') войти
 
